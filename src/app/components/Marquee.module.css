@@ -65,10 +65,11 @@
 }
 
 .pressLogo, .venueLogo {
-  padding: 0 4vw;
+  padding: 0 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .pressLogo img {
@@ -80,11 +81,12 @@
   object-fit: contain;
 }
 
-.venueImage {
-  transition: all 0.3s ease;
-  height: 140px !important;
-  width: auto !important;
-  object-fit: contain;
+/* Wrapper div that controls logo size — Image fill stretches inside */
+.venueImageWrap {
+  position: relative;
+  width: 180px;
+  height: 120px;
+  flex-shrink: 0;
 }
 
 .pressLogo img:hover {
@@ -96,13 +98,14 @@
   .pressLogo img {
     height: 36px;
   }
-  
-  .venueImage {
-    height: 160px !important;
+
+  .venueImageWrap {
+    width: 160px;
+    height: 110px;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
 
   .venueSection {
@@ -114,13 +117,14 @@
   .pressLogo img {
     height: 32px;
   }
-  
-  .venueImage {
-    height: 140px !important;
+
+  .venueImageWrap {
+    width: 140px;
+    height: 100px;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 6vw;
+    padding: 0 5vw;
   }
 
   .marqueeSection {
@@ -136,3 +140,4 @@
     margin-bottom: 12px;
   }
 }
+

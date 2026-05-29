@@ -59,35 +59,40 @@ export default function Navbar() {
     return () => document.body.classList.remove('menu-open');
   }, [menuOpen]);
 
-  const handleLinkClick = (e, href) => {
-    if (!href.includes('#')) {
-      if (menuOpen) setMenuOpen(false);
-      return; // Standard page navigation
-    }
-    if (window.location.pathname !== '/') {
-      if (menuOpen) setMenuOpen(false);
-      return; // Standard link navigation to /#target
-    }
-    e.preventDefault();
-    const targetHref = href.replace('/', '');
-    
-    if (menuOpen) {
-      setMenuOpen(false);
-      setTimeout(() => {
-        const el = targetHref === '' ? document.body : document.querySelector(targetHref);
-        if (el) {
-          const top = el.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      }, 300); // Wait for exit animation
-    } else {
-      const el = targetHref === '' ? document.body : document.querySelector(targetHref);
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
+  const scrollToHash = (hash) => {
+    const el = document.querySelector(hash);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
+
+  const handleLinkClick = (e, href) => {
+    // No hash — normal page navigation
+    if (!href.includes('#')) {
+      if (menuOpen) setMenuOpen(false);
+      return;
+    }
+
+    const hash = href.includes('/#') ? href.replace('/#', '#') : href;
+
+    // If we're not on the homepage, let the browser navigate to /#section naturally
+    if (window.location.pathname !== '/') {
+      if (menuOpen) setMenuOpen(false);
+      return;
+    }
+
+    e.preventDefault();
+
+    if (menuOpen) {
+      setMenuOpen(false);
+      // Wait for menu close animation, then scroll
+      setTimeout(() => scrollToHash(hash), 350);
+    } else {
+      scrollToHash(hash);
+    }
+  };
+
 
   return (
     <>

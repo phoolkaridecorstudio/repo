@@ -144,7 +144,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator — absolute on desktop, inline on mobile */}
       <motion.a
         href="/#about"
         className={styles.scrollIndicator}

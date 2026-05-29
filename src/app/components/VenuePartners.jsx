@@ -11,6 +11,9 @@ const venueItems = [
   { name: 'Le Meridien', src: '/images/logos/lemeridien.png' }
 ];
 
+// Duplicate 4x for seamless infinite loop
+const duplicated = [...venueItems, ...venueItems, ...venueItems, ...venueItems];
+
 export default function VenuePartners() {
   return (
     <section className={`${styles.marqueeSection} ${styles.venueSection}`}>
@@ -19,42 +22,29 @@ export default function VenuePartners() {
           <h2 className="section-title">Preferred <em>Partners</em></h2>
         </div>
       </div>
-      
+
       <div className={styles.marqueeContainer}>
-        {/* Left/Right Fades */}
         <div className={styles.fadeLeft}></div>
         <div className={styles.fadeRight}></div>
-        
+
         <motion.div
           className={styles.marqueeTrack}
-          animate={{ x: ["-50%", "0%"] }} // Scroll right for variation
-          transition={{ ease: "linear", duration: 30, repeat: Infinity }}
+          animate={{ x: ['0%', '-50%'] }}
+          transition={{ ease: 'linear', duration: 20, repeat: Infinity }}
         >
-          {/* Duplicate set for infinite loop */}
-          <div className={styles.marqueeContent}>
-            {venueItems.map((item, idx) => (
-              <div key={idx} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
+          {duplicated.map((item, idx) => (
+            <div key={idx} className={styles.venueLogo}>
+              <div className={styles.venueImageWrap}>
+                <Image
+                  src={item.src}
+                  alt={item.name}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  sizes="200px"
+                />
               </div>
-            ))}
-            {venueItems.map((item, idx) => (
-              <div key={`extra-${idx}`} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
-              </div>
-            ))}
-          </div>
-          <div className={styles.marqueeContent}>
-            {venueItems.map((item, idx) => (
-              <div key={`dup-${idx}`} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
-              </div>
-            ))}
-            {venueItems.map((item, idx) => (
-              <div key={`dup-extra-${idx}`} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
