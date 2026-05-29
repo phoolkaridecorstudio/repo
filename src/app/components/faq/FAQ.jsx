@@ -60,7 +60,7 @@ export default function FAQ() {
           transition={{ duration: 0.8 }}
         >
           <span className="section-label">Got Questions?</span>
-          <h2 className="section-title">Frequently Asked <em>Questions</em></h2>
+          <h2 className="section-title" style={{ color: 'var(--cream)' }}>Frequently Asked <em>Questions</em></h2>
           <div className="gold-divider">
             <span className="line" /><span className="dot" /><span className="line" />
           </div>

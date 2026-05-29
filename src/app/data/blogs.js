@@ -180,5 +180,225 @@ export const blogsData = [
     author: 'Phoolkari Editorial Team',
     readTime: '5 min read',
     category: 'Wedding Trends',
+  },
+  {
+    id: 7,
+    slug: 'top-wedding-decorators-ludhiana-luxury-guide',
+    title: 'Top Wedding Decorators in Ludhiana: A Guide to Luxury Events',
+    excerpt: 'Explore how Phoolkari Decor Studio brings unparalleled luxury wedding decoration to Ludhiana\'s most prestigious venues and farmhouses.',
+    content: `
+      <h2>The Standard of Luxury in Ludhiana</h2>
+      <p>Ludhiana is known for its opulent lifestyle and grand celebrations. When it comes to weddings, families here spare no expense, demanding the absolute best wedding decorators in Ludhiana to transform their visions into reality.</p>
+      
+      <h3>Farmhouse Transformations</h3>
+      <p>Ludhiana boasts massive private farmhouses that act as blank canvases for premium event styling. Our team specializes in converting these vast open spaces into immersive luxury environments, complete with weather-proof premium tent houses and structural marvels.</p>
+
+      <h3>High-End Floral Decor</h3>
+      <p>The demand for exotic, imported florals is exceptionally high in Ludhiana. We frequently design massive floral ceiling installations and bespoke table centerpieces using Colombian roses, orchids, and tulips, establishing us as the premium floral decor service in Punjab.</p>
+
+      <p>Whether you are hosting an event at a 5-star hotel or a sprawling private estate, finding the right luxury wedding decorators in Punjab is crucial for a flawless execution.</p>
+    `,
+    image: '/images/portfolio/event-5.png',
+    date: 'May 20, 2024',
+    author: 'Phoolkari Editorial Team',
+    readTime: '3 min read',
+    category: 'Event Planning',
+  },
+  {
+    id: 8,
+    slug: 'destination-weddings-punjab-resorts-vs-palaces',
+    title: 'Destination Weddings in Punjab: Resorts vs. Heritage Palaces',
+    excerpt: 'Planning a destination wedding decor in Punjab? We compare luxury resorts and heritage marriage palaces to help you choose your perfect venue.',
+    content: `
+      <h2>The Rise of Destination Weddings in Punjab</h2>
+      <p>You don't need to travel to Rajasthan for a destination wedding. Punjab offers incredible venues ranging from ultra-luxury resorts to historic heritage palaces, making it a prime location for destination wedding decor in Punjab.</p>
+      
+      <h3>Luxury Resort Wedding Decor</h3>
+      <p>Resorts in Amritsar and Mohali offer modern amenities and sprawling lawns. Resort wedding decoration focuses on blending nature with luxury—think fairy-light canopies under the stars, modern minimalist mandaps by the pool, and chic cocktail setups.</p>
+
+      <h3>Royal Palace Wedding Decor</h3>
+      <p>For a traditional, regal vibe, heritage marriage palaces are unbeatable. Royal palace wedding decor requires a different approach: enhancing existing architecture with heavy marigold drapings, vintage brass props, and traditional Rajasthani or Punjabi themes.</p>
+
+      <p>Whether you choose a resort or a palace, the best wedding decorators in Punjab can tailor the theme to perfectly match the venue's inherent character.</p>
+    `,
+    image: '/images/themes/royal-rajasthani.png',
+    date: 'May 25, 2024',
+    author: 'Mukesh N Aggarwal',
+    readTime: '4 min read',
+    category: 'Wedding Venues',
+  },
+  {
+    id: 9,
+    slug: 'luxury-tent-houses-punjab-weddings',
+    title: 'The Rise of Luxury Tent Houses in Punjab Weddings',
+    excerpt: 'Discover why premium tent houses and shamiana rentals are becoming the backbone of luxury outdoor weddings in Punjab.',
+    content: `
+      <h2>Beyond the Traditional Shamiana</h2>
+      <p>The concept of a "Tent House" has evolved dramatically. Today, the best tent house services in Punjab offer fully air-conditioned, weather-proof, and structurally massive German hangers that feel more like permanent banquet halls than temporary tents.</p>
+      
+      <h3>Premium Tent Decoration</h3>
+      <p>Once the luxury tent is erected, the real magic begins. Wedding tent decoration involves draping the interiors with heavy silks, installing massive crystal chandeliers, and building custom wooden floors. It is the ultimate flex in bespoke wedding decor.</p>
+
+      <h3>Event Infrastructure Rental</h3>
+      <p>For farmhouse weddings, a premium tent house provides the necessary infrastructure—from luxury mobile restrooms to catering shamianas. At Phoolkari, we coordinate seamlessly with event tent rental providers to ensure the structural integrity matches our high-end decor standards.</p>
+    `,
+    image: '/images/portfolio/event-2.png',
+    date: 'June 02, 2024',
+    author: 'Phoolkari Editorial Team',
+    readTime: '4 min read',
+    category: 'Wedding Trends',
+  },
+  {
+    id: 10,
+    slug: 'jalandhar-royal-wedding-venues-decor',
+    title: 'Jalandhar\'s Best Kept Secrets for Royal Wedding Venues',
+    excerpt: 'A deep dive into Jalandhar\'s premier marriage palaces and how luxury wedding decorators are transforming them.',
+    content: `
+      <h2>Grandeur in Jalandhar</h2>
+      <p>Jalandhar is home to some of the most expansive and luxurious marriage palaces in the region. As top wedding decorators in Jalandhar, we have had the privilege of styling these magnificent venues for high-profile clients.</p>
+      
+      <h3>Marriage Palace Decoration Services</h3>
+      <p>Decorating a massive marriage hall requires scale. Banquet hall decoration in Jalandhar often features grand entrance walkways lined with cold pyros and exotic flowers, leading into vast halls illuminated by programmable kinetic lighting.</p>
+
+      <h3>Themed Experiences</h3>
+      <p>Jalandhar clients love immersive themes. From recreating a Parisian street for a Sangeet to building a traditional Awadhi courtyard for a Mehndi, event decor companies in Jalandhar must be highly versatile and creative.</p>
+    `,
+    image: '/images/themes/modern-minimalist.png',
+    date: 'June 10, 2024',
+    author: 'Mukesh N Aggarwal',
+    readTime: '3 min read',
+    category: 'Wedding Venues',
+  },
+  {
+    id: 11,
+    slug: 'wedding-decor-cost-punjab-pricing-guide',
+    title: 'How Much Does Luxury Wedding Decor Cost in Punjab?',
+    excerpt: 'An honest guide to wedding decoration prices, packages, and what determines the cost of high-end wedding decor in Punjab.',
+    content: `
+      <h2>Understanding Wedding Decoration Prices</h2>
+      <p>One of the most common questions we get is regarding the wedding decor cost in Punjab. The truth is, bespoke luxury decor does not have a fixed menu. It is highly variable based on your vision.</p>
+      
+      <h3>Factors Influencing the Cost</h3>
+      <ul>
+        <li><strong>Floral Selection:</strong> Using local marigolds is vastly different in price compared to importing thousands of Dutch tulips and Phalaenopsis orchids.</li>
+        <li><strong>Scale and Structure:</strong> Building a custom 40-foot stage from scratch costs more than utilizing a venue's existing infrastructure.</li>
+        <li><strong>Labor and Logistics:</strong> Luxury setups require hundreds of skilled artisans, carpenters, florists, and lighting technicians working around the clock.</li>
+      </ul>
+
+      <h3>Wedding Decoration Packages</h3>
+      <p>While some decorators offer fixed affordable wedding decor packages, premium wedding decor companies in Punjab operate on customized quotes. Expect to invest a significant portion of your wedding budget to achieve that magazine-cover look.</p>
+    `,
+    image: '/images/portfolio/event-1.png',
+    date: 'June 15, 2024',
+    author: 'Phoolkari Editorial Team',
+    readTime: '5 min read',
+    category: 'Event Planning',
+  },
+  {
+    id: 12,
+    slug: 'floral-decor-services-haldi-to-reception',
+    title: 'Floral Decor Services: From Haldi to Reception',
+    excerpt: 'How different floral arrangements set the mood for various wedding functions, from vibrant Haldi ceremonies to elegant Receptions.',
+    content: `
+      <h2>The Language of Flowers</h2>
+      <p>Flowers are the most powerful tool in an event decorator's arsenal. The right floral decoration services in Punjab can completely alter the emotional resonance of a room.</p>
+      
+      <h3>Haldi and Mehndi Decoration</h3>
+      <p>These daytime events demand bright, energetic colors. We heavily utilize yellow marigolds, bright pink bougainvillea, and colorful carnations. Props like brass urulis and painted matkas complete the traditional Mehndi decoration vibe.</p>
+
+      <h3>Reception Decoration</h3>
+      <p>Receptions are evening affairs requiring sophistication. Reception decoration in Punjab leans heavily towards elegant whites, deep reds, or soft pastels. We use premium roses, hydrangeas, and baby's breath to create luxurious, cascading centerpieces and massive floral photo backdrops.</p>
+    `,
+    image: '/images/portfolio/event-4.png',
+    date: 'June 22, 2024',
+    author: 'Mukesh N Aggarwal',
+    readTime: '3 min read',
+    category: 'Design & Aesthetics',
+  },
+  {
+    id: 13,
+    slug: 'corporate-event-management-mohali-chandigarh',
+    title: 'Corporate Event Management in Mohali and Chandigarh',
+    excerpt: 'Why Phoolkari Decor Studio is the preferred corporate event organizer for high-profile conferences and product launches in the Tricity area.',
+    content: `
+      <h2>Professional Event Infrastructure</h2>
+      <p>The corporate hub of Mohali and Chandigarh requires a different breed of event management. Corporate event decor in Punjab must be sleek, professional, and flawlessly executed without any hiccups.</p>
+      
+      <h3>Conference Setup and Exhibition Design</h3>
+      <p>We provide comprehensive corporate event services, including state-of-the-art exhibition booth designs, LED wall setups, and corporate stage decoration. Whether it is an annual day event planner you need or a product launch event organizer, precision is our priority.</p>
+
+      <h3>Gala Dinners and Award Ceremonies</h3>
+      <p>When the business day ends, the celebration begins. We transform standard hotel ballrooms into spectacular venues for award ceremony decoration, utilizing intelligent lighting, elegant table scaping, and sophisticated floral designs.</p>
+    `,
+    image: '/images/portfolio/event-3.png',
+    date: 'July 05, 2024',
+    author: 'Phoolkari Editorial Team',
+    readTime: '4 min read',
+    category: 'Corporate Events',
+  },
+  {
+    id: 14,
+    slug: 'wedding-stage-mandap-decoration-guide',
+    title: 'The Ultimate Guide to Wedding Stages and Mandaps in Punjab',
+    excerpt: 'Explore the latest trends in Wedding Stage Decoration and Mandap designs, the focal points of any grand Indian wedding.',
+    content: `
+      <h2>The Center of Attention</h2>
+      <p>At any Indian wedding, the Stage and the Mandap are the absolute focal points. Every guest will look at them, and every photograph will feature them. This is where wedding stage decoration in Punjab truly becomes an art form.</p>
+      
+      <h3>Wedding Mandap Decoration</h3>
+      <p>The Mandap is sacred. Traditional designs use heavy floral domes and brass bells, while modern couples prefer open-air structures made of clear acrylic adorned with imported white blooms. As leading wedding decorators, we ensure the Mandap reflects both tradition and the couple's personal style.</p>
+
+      <h3>Reception Stage Designs</h3>
+      <p>Reception stages are all about grandeur. We utilize massive LED screens, cascading floral walls, and custom-built geometric structures. A well-designed stage not only looks stunning in person but serves as the perfect backdrop for professional photography.</p>
+    `,
+    image: '/images/themes/enchanted-garden.png',
+    date: 'July 12, 2024',
+    author: 'Mukesh N Aggarwal',
+    readTime: '4 min read',
+    category: 'Wedding Trends',
+  },
+  {
+    id: 15,
+    slug: 'birthday-anniversary-party-decoration-amritsar',
+    title: 'Premium Birthday and Anniversary Party Decoration in Amritsar',
+    excerpt: 'Why luxury decor isn\'t just for weddings. How we style high-end birthday parties, baby showers, and anniversaries in Punjab.',
+    content: `
+      <h2>Celebrating Life's Milestones</h2>
+      <p>Luxury event styling is not limited to weddings. We are seeing a massive surge in demand for premium birthday party decoration in Punjab, as well as grand anniversary celebrations and baby showers.</p>
+      
+      <h3>Themed Birthday Parties</h3>
+      <p>For children and adults alike, themed parties are incredibly popular. From recreating a specific movie universe to designing an elegant "Roaring 20s" speakeasy for a 50th birthday, an event decor company can bring any fantasy to life.</p>
+
+      <h3>Anniversary and Ring Ceremony Decoration</h3>
+      <p>Silver and Golden anniversaries, as well as Ring Ceremonies, deserve to be celebrated with elegance. We create intimate, sophisticated environments using soft lighting, luxury table linens, and bespoke floral centerpieces, proving that we are more than just wedding organizers.</p>
+    `,
+    image: '/images/portfolio/event-5.png',
+    date: 'July 18, 2024',
+    author: 'Phoolkari Editorial Team',
+    readTime: '3 min read',
+    category: 'Private Events',
+  },
+  {
+    id: 16,
+    slug: 'finding-best-wedding-decorators-near-me',
+    title: 'How to Choose the Best Wedding Decorators Near Me',
+    excerpt: 'A comprehensive guide on what to look for when searching for local event planners, tent houses, and luxury wedding decorators in your city.',
+    content: `
+      <h2>The Search for Perfection</h2>
+      <p>When searching for "wedding decorators near me" or a "luxury wedding planner near me", the options can be overwhelming. How do you distinguish a premium event styling company from an average one?</p>
+      
+      <h3>Portfolio and Versatility</h3>
+      <p>Always ask to see real event photos, not just 3D renders. Look for versatility. The best wedding decor company near me should be able to execute a rustic farmhouse wedding just as flawlessly as a highly technical corporate event.</p>
+
+      <h3>In-House Capabilities</h3>
+      <p>Does the company own their inventory, or do they sub-rent everything? Companies like Phoolkari Decor Studio have their own warehouses, florists, and fabrication units. This reduces reliance on third-party tent house near me rentals and ensures absolute quality control.</p>
+      
+      <p>Choosing the right event management company near me is the first step towards a stress-free, visually spectacular celebration.</p>
+    `,
+    image: '/images/portfolio/event-1.png',
+    date: 'July 25, 2024',
+    author: 'Mukesh N Aggarwal',
+    readTime: '4 min read',
+    category: 'Event Planning',
   }
 ];
