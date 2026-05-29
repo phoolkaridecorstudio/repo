@@ -15,7 +15,7 @@ export default function VenuePartners() {
   return (
     <section className={`${styles.marqueeSection} ${styles.venueSection}`}>
       <div className="container">
-        <div className="section-header" style={{ marginBottom: '40px' }}>
+        <div className="section-header" style={{ marginBottom: '16px' }}>
           <h2 className="section-title">Preferred <em>Partners</em></h2>
         </div>
       </div>

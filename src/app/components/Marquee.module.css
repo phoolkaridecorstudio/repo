@@ -98,15 +98,15 @@
   }
   
   .venueImage {
-    height: 120px !important;
+    height: 160px !important;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 6vw;
+    padding: 0 5vw;
   }
 
   .venueSection {
-    padding: 32px 0;
+    padding: 20px 0;
   }
 }
 
@@ -116,19 +116,23 @@
   }
   
   .venueImage {
-    height: 100px !important;
+    height: 140px !important;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 8vw;
+    padding: 0 6vw;
   }
 
   .marqueeSection {
-    padding: 20px 0;
+    padding: 16px 0;
+  }
+
+  .venueSection {
+    padding: 16px 0;
   }
 
   .marqueeLabel {
     font-size: 0.7rem;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 }

@@ -16,7 +16,7 @@ const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'));
 const BackToTop = dynamic(() => import('./components/BackToTop'));
 const Preloader = dynamic(() => import('./components/Preloader'));
 const CustomCursor = dynamic(() => import('./components/CustomCursor'));
-const FloatingDock = dynamic(() => import('./components/FloatingDock'));
+
 const VenuePartners = dynamic(() => import('./components/VenuePartners'));
 
 export const metadata = {
@@ -49,7 +49,7 @@ export default function Home() {
       <Footer />
       <WhatsAppFloat />
       <BackToTop />
-      <FloatingDock />
+
     </>
   );
 }
