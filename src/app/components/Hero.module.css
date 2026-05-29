@@ -362,7 +362,6 @@
     padding-bottom: 40px;
     gap: 0;
     min-height: unset;
-    align-items: flex-start;
   }
 
   .hero {
@@ -419,16 +418,8 @@
     max-width: 280px;
   }
 
-  /* Move scroll indicator from absolute to static so it flows after content */
   .scrollIndicator {
-    position: static;
-    transform: none;
-    left: auto;
-    bottom: auto;
-    margin-top: 36px;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 16px;
+    display: none;
   }
 }
 
