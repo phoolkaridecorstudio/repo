@@ -1,0 +1,226 @@
+.process {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Horizontal timeline layout */
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* Step card */
+.step {
+  position: relative;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* Large watermark number */
+.stepNumber {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px;
+}
+
+.stepNumber span {
+  display: block;
+}
+
+.stepNumberWatermark {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 10vw, 8rem);
+  font-weight: 700;
+  color: var(--gold-dark);
+  opacity: 0.05;
+  line-height: 0.8;
+  user-select: none;
+}
+
+.stepNumberLabel {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: -20px;
+  position: relative;
+  z-index: 1;
+}
+
+.stepContent {
+  position: relative;
+  z-index: 2;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.2;
+  transition: color 0.3s;
+}
+
+.stepDesc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* Gold accent top border on hover */
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 0.4s var(--ease);
+}
+
+.step:hover::before {
+  opacity: 1;
+  width: 60px;
+}
+
+.step:hover .stepTitle {
+  color: var(--gold-dark);
+}
+
+/* Tablet — 2 columns */
+@media (min-width: 768px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Desktop — 4 columns with connecting line */
+@media (min-width: 1024px) {
+  .timeline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-muted) 15%, var(--gold-muted) 85%, transparent);
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.3;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+
+  .step:hover::after {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 12px rgba(197, 151, 62, 0.4);
+  }
+
+  .step::before { top: -4px; }
+  .stepDesc { max-width: 240px; }
+}
+
+/* Mobile — left-border timeline */
+@media (max-width: 767px) {
+  .timeline {
+    padding-left: 8px;
+  }
+
+  .step {
+    text-align: left;
+    padding: 20px 16px 20px 28px;
+    border-left: 2px solid var(--champagne);
+  }
+
+  .step:last-child {
+    border-left-color: transparent;
+  }
+
+  .step::before {
+    left: -5px;
+    top: 28px;
+    transform: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 1;
+  }
+
+  .step:hover::before {
+    width: 8px;
+    box-shadow: 0 0 12px rgba(197, 151, 62, 0.4);
+  }
+
+  .stepNumber {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .stepNumberWatermark {
+    font-size: 2.5rem;
+    position: static;
+    opacity: 0.08;
+  }
+
+  .stepNumberLabel {
+    margin-top: 0;
+    font-size: 0.62rem;
+  }
+
+  .stepTitle {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .stepDesc {
+    max-width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .step {
+    padding: 16px 12px 16px 24px;
+  }
+
+  .stepNumberWatermark { font-size: 2rem; }
+  .stepTitle { font-size: 1.15rem; }
+  .stepDesc { font-size: 0.8rem; }
+}

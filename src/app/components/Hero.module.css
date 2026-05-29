@@ -1,0 +1,443 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Background — full bleed dark */
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #0F0A05;
+}
+
+.bgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: kenburns 25s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 10, 5, 0.97) 0%,
+    rgba(15, 10, 5, 0.85) 45%,
+    rgba(15, 10, 5, 0.4) 70%,
+    rgba(15, 10, 5, 0.15) 100%
+  );
+}
+
+.grain {
+  position: absolute;
+  inset: -100%;
+  width: 300%;
+  height: 300%;
+  /* Replaced expensive SVG filter with a tiny, hardware-accelerated base64 static noise image for smooth scrolling */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAP////////////////////////871q6yAAAACHRSTlMAv3+v39/f32Z7g8EAAAAsSURBVDjLY2AYBcMgwMDQ0NDQwMDIwMDAwMDAwMDAwMDAwMDAwMDAwMAoGAAAgwABQ0o7GgAAAABJRU5ErkJggg==");
+  background-repeat: repeat;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Split layout wrapper */
+.content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+  min-height: 100dvh;
+  gap: 40px;
+}
+
+/* Left — Text side */
+.textSide {
+  flex: 1.2;
+  padding: 60px 0;
+}
+
+.goldLine {
+  height: 2px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+  margin-bottom: 32px;
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.labelLine {
+  width: 40px;
+  height: 1px;
+  background: var(--gold-muted);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 48px;
+}
+
+.titleLine {
+  display: block;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.titleLine2 {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+.titleLine3 {
+  display: block;
+  font-size: clamp(4rem, 10vw, 8rem);
+  margin-top: 16px;
+  line-height: 0.85;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+
+.wordAccent {
+  font-family: var(--font-script);
+  font-weight: 400;
+  background: linear-gradient(
+    90deg,
+    var(--gold-light) 0%,
+    var(--gold-pale) 30%,
+    var(--gold) 50%,
+    var(--gold-pale) 70%,
+    var(--gold-light) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 5s linear infinite;
+  display: inline-block;
+  padding: 0.3em 0.5em 0.4em 0.3em;
+  margin: -0.3em -0.5em -0.4em -0.3em;
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 48px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Right — Image side */
+.imageSide {
+  flex: 0.8;
+  position: relative;
+  height: 75vh;
+  max-height: 700px;
+  align-self: center;
+  display: none;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  overflow: hidden;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.4);
+}
+
+.imageFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.goldStrip {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 4px;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(197, 151, 62, 0.3);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 10, 5, 0.1) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(15, 10, 5, 0.3) 100%
+  );
+}
+
+.imageBadge {
+  position: absolute;
+  bottom: 32px;
+  left: -20px;
+  background: rgba(15, 10, 5, 0.95);
+  /* Removed expensive backdrop-filter: blur(16px) for massive scroll performance gain */
+  border: 1px solid rgba(197, 151, 62, 0.25);
+  border-radius: 14px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  will-change: transform;
+}
+
+.badgeIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.badgeText {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.scrollIndicator:hover {
+  color: var(--gold-light);
+}
+
+.scrollLine {
+  width: 80px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollDot {
+  width: 30px;
+  height: 1px;
+  background: var(--gold-light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: scrollWheel 2s ease infinite;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .imageSide {
+    display: block;
+  }
+
+  .imageFrame {
+    border-radius: var(--radius-xl);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: calc(var(--nav-height) + 20px);
+    padding-bottom: 80px;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 10, 5, 0.6) 0%,
+      rgba(15, 10, 5, 0.85) 50%,
+      rgba(15, 10, 5, 0.95) 100%
+    );
+  }
+
+  .bgImg {
+    opacity: 0.5;
+  }
+
+  .textSide {
+    padding: 20px 0;
+  }
+
+  .label {
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .scrollIndicator {
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    bottom: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 var(--container-pad);
+    padding-top: calc(var(--nav-height) + 16px);
+    padding-bottom: 72px;
+    gap: 0;
+  }
+
+  .title {
+    margin-bottom: 28px;
+  }
+
+  .titleLine {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .titleLine2 {
+    font-size: clamp(1.5rem, 5.5vw, 2.2rem);
+    margin-top: 8px;
+  }
+
+  .titleLine3 {
+    font-size: clamp(3rem, 14vw, 5rem);
+    margin-top: 8px;
+  }
+
+  .goldLine {
+    margin-bottom: 20px;
+  }
+
+  .label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .labelLine {
+    width: 24px;
+  }
+
+  .subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .actions a {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .content {
+    padding-top: calc(var(--nav-height) + 8px);
+    padding-bottom: 64px;
+  }
+
+  .titleLine {
+    font-size: 1.8rem;
+  }
+
+  .titleLine2 {
+    font-size: 1.3rem;
+  }
+
+  .titleLine3 {
+    font-size: 2.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.82rem;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}

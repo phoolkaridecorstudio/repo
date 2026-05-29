@@ -1,0 +1,209 @@
+.footer {
+  background: var(--black);
+  color: rgba(255, 255, 255, 0.45);
+  padding: 120px 0 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ornament {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+}
+
+/* Large watermark text */
+.watermark {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 16vw, 14rem);
+  font-weight: 700;
+  color: rgba(197, 151, 62, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 72px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand {}
+
+.logo {
+  height: 180px;
+  width: auto;
+  margin-bottom: 24px;
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+.social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(197, 151, 62, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s;
+}
+
+.social a:hover {
+  background: var(--gradient-gold);
+  color: var(--ivory);
+  border-color: transparent;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+}
+
+.links li { margin-bottom: 10px; }
+
+.links a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s;
+}
+
+.links a:hover {
+  color: var(--gold-light);
+  padding-left: 4px;
+}
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contactList li svg { color: var(--gold); flex-shrink: 0; }
+
+.contactList a,
+.contactList span {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.4);
+  word-break: break-all;
+}
+
+.contactList a:hover { color: var(--gold-light); }
+
+/* Bottom bar with centered dot divider */
+.bottom {
+  border-top: 1px solid rgba(197, 151, 62, 0.08);
+  padding-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  position: relative;
+  z-index: 1;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legalLinks a {
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s;
+}
+
+.legalLinks a:hover {
+  color: var(--gold-light);
+}
+
+.bottomDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold-muted);
+  display: inline-block;
+}
+
+.heart {
+  color: var(--rose);
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: 1.6fr 1fr 1fr 1.3fr; }
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 64px 0 36px; }
+  .grid { gap: 36px; margin-bottom: 48px; }
+  .logo { height: 140px; }
+  .tagline { font-size: 0.92rem; margin-bottom: 16px; }
+  .links a { font-size: 0.85rem; }
+  .contactList a, .contactList span { font-size: 0.82rem; }
+  .bottom { font-size: 0.72rem; padding-top: 24px; }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 0 100px; /* Extra bottom padding for FloatingDock */
+  }
+  .grid { gap: 28px; margin-bottom: 40px; }
+  .logo { height: 100px; margin-bottom: 14px; }
+  .tagline { font-size: 0.85rem; }
+  .heading { font-size: 0.68rem; margin-bottom: 14px; }
+  .links li { margin-bottom: 8px; }
+  .links a { font-size: 0.82rem; }
+  .contactList li { margin-bottom: 10px; gap: 8px; }
+  .contactList a, .contactList span { font-size: 0.78rem; }
+  .social a { width: 32px; height: 32px; }
+  .bottom { flex-direction: column; gap: 4px; font-size: 0.68rem; }
+  .watermark { font-size: 5rem; }
+}
+
+@media (max-width: 380px) {
+  .footer { padding: 40px 0 100px; }
+  .grid { gap: 24px; }
+  .logo { height: 90px; }
+}

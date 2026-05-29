@@ -1,0 +1,135 @@
+.themesPage {
+  padding: 160px 0 80px;
+  background-color: var(--black);
+  min-height: 100vh;
+  color: var(--cream);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.themesList {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.themeRow {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.themeRow:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.imageWrap {
+  flex: 1.2;
+  position: relative;
+  height: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.imageWrap img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.themeRow:hover .imageWrap img {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(197, 151, 62, 0.15);
+  color: var(--gold);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--cream);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.desc {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.featuresList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.checkIcon {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .themeRow, .themeRow:nth-child(even) {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .imageWrap {
+    height: 400px;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .themesList {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrap {
+    height: 300px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}

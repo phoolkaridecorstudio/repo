@@ -1,0 +1,132 @@
+.marqueeSection {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(197, 151, 62, 0.15);
+  background: var(--ivory);
+  overflow: hidden;
+  position: relative;
+}
+
+.venueSection {
+  padding: 40px 0;
+  background: var(--cream);
+}
+
+.marqueeLabel {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.marqueeContainer {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fadeLeft, .fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15vw;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--ivory) 0%, transparent 100%);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, var(--ivory) 0%, transparent 100%);
+}
+
+.venueSection .fadeLeft { background: linear-gradient(to right, var(--cream) 0%, transparent 100%); }
+.venueSection .fadeRight { background: linear-gradient(to left, var(--cream) 0%, transparent 100%); }
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.pressLogo, .venueLogo {
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pressLogo img {
+  height: 45px;
+  width: auto;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.venueImage {
+  transition: all 0.3s ease;
+  /* Height is controlled via inline style now (maxHeight: 90px) */
+}
+
+.pressLogo img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .pressLogo img {
+    height: 32px;
+  }
+  
+  .venueImage {
+    max-height: 90px !important;
+  }
+
+  .pressLogo, .venueLogo {
+    padding: 0 3vw;
+  }
+
+  .venueSection {
+    padding: 28px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .pressLogo img {
+    height: 26px;
+  }
+  
+  .venueImage {
+    max-height: 65px !important;
+  }
+
+  .pressLogo, .venueLogo {
+    padding: 0 2.5vw;
+  }
+
+  .marqueeSection {
+    padding: 14px 0;
+  }
+
+  .marqueeLabel {
+    font-size: 0.65rem;
+    margin-bottom: 16px;
+  }
+}

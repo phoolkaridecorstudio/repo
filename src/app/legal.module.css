@@ -1,0 +1,55 @@
+.legalPage {
+  padding: calc(var(--nav-height, 72px) + 60px) 0 80px;
+  background: var(--black);
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.legalPage h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  line-height: 1.8;
+}
+
+.content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  margin: 40px 0 20px;
+  letter-spacing: 0.05em;
+}
+
+.content p {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+.content a {
+  color: var(--gold);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.content a:hover {
+  color: var(--gold-light);
+}

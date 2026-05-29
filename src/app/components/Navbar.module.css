@@ -1,0 +1,233 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 12px 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 253, 248, 0.95);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  padding: 4px 0;
+  box-shadow: 0 1px 30px rgba(139, 105, 20, 0.05);
+  border-bottom: 1px solid rgba(197, 151, 62, 0.06);
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 4px 0;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navbar.scrolled .logo img {
+  height: 60px;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLink {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* When scrolled, links become dark */
+.navbar.scrolled .navLink {
+  color: var(--text-body);
+}
+
+/* Small gold dot indicator instead of underline */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  transition: all 0.3s var(--ease);
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--gold);
+}
+
+.navbar.scrolled .navLink:hover,
+.navbar.scrolled .navLink.active {
+  color: var(--gold);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  opacity: 1;
+}
+
+.cta {
+  display: none;
+  padding: 11px 28px;
+  font-size: 0.75rem;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  z-index: 310;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+}
+
+.navbar.scrolled .hamburger span {
+  background: var(--text-primary);
+}
+
+.hamburger.open span {
+  background: var(--cream) !important;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 16, 8, 0.97);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileInner {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 2rem;
+}
+
+.mobileLogo {
+  width: 200px;
+  margin: 0 auto 48px;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLink {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--cream);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(197, 151, 62, 0.08);
+  transition: color 0.2s;
+}
+
+.mobileLink:hover {
+  color: var(--gold-light);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .nav { display: flex; }
+  .cta { display: inline-flex; }
+  .hamburger { display: none; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 var(--container-pad); }
+  .logo img { height: 68px; }
+  .navbar.scrolled .logo img { height: 52px; }
+
+  .mobileLink {
+    font-size: 1.5rem;
+    padding: 12px 0;
+  }
+
+  .mobileLogo {
+    width: 160px;
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img { height: 58px; }
+  .navbar.scrolled .logo img { height: 46px; }
+
+  .mobileLink {
+    font-size: 1.3rem;
+    padding: 10px 0;
+  }
+
+  .mobileLogo {
+    width: 140px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo img { height: 50px; }
+  .navbar.scrolled .logo img { height: 42px; }
+}
