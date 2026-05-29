@@ -16,8 +16,7 @@ export default function VenuePartners() {
     <section className={`${styles.marqueeSection} ${styles.venueSection}`}>
       <div className="container">
         <div className="section-header" style={{ marginBottom: '40px' }}>
-          <span className="section-label">Preferred Partner</span>
-          <h2 className="section-title">Luxury <em>Venues</em></h2>
+          <h2 className="section-title">Preferred <em>Partners</em></h2>
         </div>
       </div>
       
@@ -35,24 +34,24 @@ export default function VenuePartners() {
           <div className={styles.marqueeContent}>
             {venueItems.map((item, idx) => (
               <div key={idx} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '130px' }} />
+                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
               </div>
             ))}
             {venueItems.map((item, idx) => (
               <div key={`extra-${idx}`} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '130px' }} />
+                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
               </div>
             ))}
           </div>
           <div className={styles.marqueeContent}>
             {venueItems.map((item, idx) => (
               <div key={`dup-${idx}`} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '130px' }} />
+                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
               </div>
             ))}
             {venueItems.map((item, idx) => (
               <div key={`dup-extra-${idx}`} className={styles.venueLogo}>
-                <Image src={item.src} alt={item.name} width={250} height={120} className={styles.venueImage} style={{ objectFit: 'contain', height: 'auto', width: 'auto', maxHeight: '90px' }} />
+                <Image src={item.src} alt={item.name} width={300} height={140} className={styles.venueImage} />
               </div>
             ))}
           </div>

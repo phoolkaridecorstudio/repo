@@ -29,7 +29,7 @@ export default function PressMarquee() {
           <div className={styles.marqueeContent}>
             {pressItems.map((item, idx) => (
               <div key={idx} className={styles.pressLogo}>
-                <Image src={item.src} alt={item.name} width={150} height={45} style={{ objectFit: 'contain', height: '100%', width: 'auto' }} />
+                <Image src={item.src} alt={item.name} width={150} height={45} />
               </div>
             ))}
           </div>
@@ -37,7 +37,7 @@ export default function PressMarquee() {
           <div className={styles.marqueeContent}>
             {pressItems.map((item, idx) => (
               <div key={`dup-${idx}`} className={styles.pressLogo}>
-                <Image src={item.src} alt={item.name} width={150} height={45} style={{ objectFit: 'contain', height: '100%', width: 'auto' }} />
+                <Image src={item.src} alt={item.name} width={150} height={45} />
               </div>
             ))}
           </div>

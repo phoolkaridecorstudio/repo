@@ -82,7 +82,9 @@
 
 .venueImage {
   transition: all 0.3s ease;
-  /* Height is controlled via inline style now (maxHeight: 90px) */
+  height: 140px;
+  width: auto;
+  object-fit: contain;
 }
 
 .pressLogo img:hover {
@@ -92,41 +94,41 @@
 
 @media (max-width: 768px) {
   .pressLogo img {
-    height: 32px;
+    height: 36px;
   }
   
   .venueImage {
-    max-height: 90px !important;
+    height: 110px;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 3vw;
+    padding: 0 4vw;
   }
 
   .venueSection {
-    padding: 28px 0;
+    padding: 32px 0;
   }
 }
 
 @media (max-width: 480px) {
   .pressLogo img {
-    height: 26px;
+    height: 32px;
   }
   
   .venueImage {
-    max-height: 65px !important;
+    height: 90px;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 2.5vw;
+    padding: 0 5vw;
   }
 
   .marqueeSection {
-    padding: 14px 0;
+    padding: 20px 0;
   }
 
   .marqueeLabel {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     margin-bottom: 16px;
   }
 }
