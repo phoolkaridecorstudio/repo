@@ -84,8 +84,8 @@
 /* Wrapper div that controls logo size — Image fill stretches inside */
 .venueImageWrap {
   position: relative;
-  width: 500px;
-  height: 340px;
+  width: 280px;
+  height: 180px;
   flex-shrink: 0;
 }
 
@@ -100,8 +100,8 @@
   }
 
   .venueImageWrap {
-    width: 480px;
-    height: 320px;
+    width: 260px;
+    height: 170px;
   }
 
   .pressLogo, .venueLogo {
@@ -119,8 +119,8 @@
   }
 
   .venueImageWrap {
-    width: 480px;
-    height: 320px;
+    width: 240px;
+    height: 160px;
   }
 
   .pressLogo, .venueLogo {
