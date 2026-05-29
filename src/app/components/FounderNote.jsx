@@ -2,7 +2,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styles from './FounderNote.module.css';
-import ScrollTextReveal from './ScrollTextReveal';
 
 export default function FounderNote() {
   const ref = useRef(null);
@@ -28,10 +27,9 @@ export default function FounderNote() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <ScrollTextReveal
-            className={styles.quote}
-            text="Luxury is not just about abundance; it's about meticulous attention to the smallest details. Our goal is to translate your most cherished dreams into a tangible, breathtaking reality."
-          />
+          <p className={styles.quote}>
+            Luxury is not just about abundance; it&apos;s about meticulous attention to the smallest details. Our goal is to translate your most cherished dreams into a tangible, breathtaking reality.
+          </p>
         </motion.div>
 
         {/* Divider */}

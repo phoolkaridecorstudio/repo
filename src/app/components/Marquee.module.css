@@ -82,8 +82,8 @@
 
 .venueImage {
   transition: all 0.3s ease;
-  height: 140px;
-  width: auto;
+  height: 140px !important;
+  width: auto !important;
   object-fit: contain;
 }
 
@@ -98,11 +98,11 @@
   }
   
   .venueImage {
-    height: 110px;
+    height: 120px !important;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 4vw;
+    padding: 0 6vw;
   }
 
   .venueSection {
@@ -116,11 +116,11 @@
   }
   
   .venueImage {
-    height: 90px;
+    height: 100px !important;
   }
 
   .pressLogo, .venueLogo {
-    padding: 0 5vw;
+    padding: 0 8vw;
   }
 
   .marqueeSection {
