@@ -129,7 +129,7 @@
 }
 
 .hamburger.open span {
-  background: var(--cream) !important;
+  background: var(--gold) !important;
 }
 
 .hamburger.open span:nth-child(1) {
