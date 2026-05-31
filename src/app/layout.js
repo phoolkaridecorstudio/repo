@@ -29,21 +29,12 @@ export const metadata = {
     locale: 'en_IN',
     url: 'https://phoolkaridecorstudio.in',
     siteName: 'Phoolkari Decor Studio',
-    images: [
-      {
-        url: 'https://phoolkaridecorstudio.in/images/og-preview.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Phoolkari Decor Studio — Luxury Wedding & Event Decoration in Amritsar',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Phoolkari Decor Studio — Luxury Event Decoration',
     description:
       'Where Every Occasion Becomes a Masterpiece. Premium decor services in Amritsar, Punjab.',
-    images: ['https://phoolkaridecorstudio.in/images/og-preview.jpg'],
   },
   robots: {
     index: true,
