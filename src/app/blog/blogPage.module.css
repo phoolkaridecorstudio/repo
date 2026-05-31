@@ -11,7 +11,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -108,8 +108,32 @@
 }
 
 @media (max-width: 768px) {
+  .blogPage {
+    padding: 120px 0 60px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
   .grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogPage {
+    padding: 100px 0 48px;
+  }
+  .header {
+    margin-bottom: 28px;
+  }
+  .imageWrap {
+    height: 200px;
+  }
+  .content {
+    padding: 24px 20px;
+  }
+  .title {
+    font-size: 1.3rem;
   }
 }

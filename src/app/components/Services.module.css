@@ -238,7 +238,12 @@
 
   .scrollTrack {
     gap: 16px;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .scrollTrack::-webkit-scrollbar {
+    display: none;
   }
 
   .card {

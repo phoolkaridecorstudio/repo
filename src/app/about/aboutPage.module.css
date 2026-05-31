@@ -7,7 +7,7 @@
 .hero {
   position: relative;
   height: 60vh;
-  min-height: 500px;
+  min-height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,12 +94,17 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    min-height: 300px;
+    padding-top: var(--nav-height);
+  }
   .valuesGrid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   .heroTitle {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   .valuesSection {
     padding: 60px 0;
@@ -116,8 +121,12 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    height: 45vh;
+    min-height: 260px;
+  }
   .heroTitle {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .valuesSection {
     padding: 48px 0;
@@ -128,5 +137,11 @@
   .valueIcon {
     font-size: 2.4rem;
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroTitle {
+    font-size: 1.8rem;
   }
 }

@@ -31,7 +31,7 @@
 .imageWrap {
   flex: 1.2;
   position: relative;
-  height: 600px;
+  height: 500px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -112,8 +112,9 @@
   }
   
   .imageWrap {
-    height: 400px;
+    height: 380px;
     width: 100%;
+    border-radius: 16px;
   }
   
   .title {
@@ -125,11 +126,41 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .themesPage {
+    padding: 120px 0 60px;
+  }
+
   .imageWrap {
     height: 300px;
+    border-radius: 14px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .themesList {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrap {
+    height: 240px;
+    border-radius: 12px;
   }
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .desc {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+  .featuresList {
+    margin-bottom: 28px;
+  }
+  .themesList {
+    gap: 48px;
   }
 }

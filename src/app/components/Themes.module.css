@@ -228,7 +228,7 @@
   .mobileStackContainer {
     display: flex;
     flex-direction: column;
-    padding: 60px 20px 80px;
+    padding: 60px 20px 100px;
     align-items: center;
   }
 
