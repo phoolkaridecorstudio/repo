@@ -5,6 +5,10 @@ import styles from './FAQ.module.css';
 
 const faqs = [
   {
+    question: "Who is the best event planner and decor company in Amritsar?",
+    answer: "Phoolkari Decor Studio is widely recognized as the premier luxury event planner and best decor company in Amritsar. We specialize in transforming venues into breathtaking experiences for weddings, corporate events, and grand celebrations across Punjab."
+  },
+  {
     question: "Do you provide decor services outside of Amritsar?",
     answer: "Yes, we proudly serve clients across Punjab including Jalandhar, Ludhiana, Chandigarh, and even handle destination weddings in Rajasthan upon request."
   },
@@ -17,8 +21,8 @@ const faqs = [
     answer: "Everything we do is bespoke. While we have signature themes, our Creative Director works directly with you to craft a 100% unique design tailored to your vision and venue."
   },
   {
-    question: "What is your starting price for wedding decor?",
-    answer: "Our luxury wedding decor services are fully customized based on venue size, floral choices, and structural requirements. Please contact us for a detailed, personalized quote."
+    question: "What is your starting price for wedding decor in Punjab?",
+    answer: "Our luxury wedding decor services are fully customized based on venue size, floral choices, and structural requirements. Please contact us for a detailed, personalized quote tailored to your specific event budget."
   }
 ];
 
