@@ -28,7 +28,7 @@ export default function FounderNote() {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className={styles.quote}>
-            Luxury is not just about abundance; it&apos;s about meticulous attention to the smallest details. Our goal is to translate your most cherished dreams into a tangible, breathtaking reality.
+            Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
           </p>
         </motion.div>
 
@@ -51,7 +51,7 @@ export default function FounderNote() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          With years of experience in curating bespoke events across Punjab&apos;s most elite venues, we believe in design that speaks. Every floral arrangement, every draped fabric, and every lighting cue is orchestrated to create an atmosphere of pure magic.
+          Crafting unforgettable experiences at Amritsar&apos;s finest hotels, resorts &amp; farmhouses
         </motion.p>
 
         {/* Signature */}

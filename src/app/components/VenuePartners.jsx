@@ -12,7 +12,8 @@ const venueItems = [
   { name: 'JW Marriott', src: '/images/logos/jw-marriott.png' },
   { name: 'Umaid Bhawan Palace', src: '/images/logos/umaid-bhawan.png' },
   { name: 'Welcomhotel', src: '/images/logos/welcomhotel.png' },
-  { name: 'RAAS', src: '/images/logos/raas.png' }
+  { name: 'RAAS', src: '/images/logos/raas.png' },
+  { name: 'Rajmahal Palace', src: '/images/logos/rajmahal-palace.png' }
 ];
 
 // Duplicate 4x for seamless infinite loop
@@ -34,7 +35,7 @@ export default function VenuePartners() {
         <motion.div
           className={styles.marqueeTrack}
           animate={{ x: ['0%', '-50%'] }}
-          transition={{ ease: 'linear', duration: 20, repeat: Infinity }}
+          transition={{ ease: 'linear', duration: 35, repeat: Infinity }}
         >
           {duplicated.map((item, idx) => (
             <div key={idx} className={styles.venueLogo}>

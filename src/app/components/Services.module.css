@@ -57,7 +57,10 @@
   margin: 0 calc(-1 * var(--container-pad));
   padding-left: var(--container-pad);
   padding-right: var(--container-pad);
+  scroll-padding-left: var(--container-pad);
+  scroll-padding-right: var(--container-pad);
   cursor: grab;
+  touch-action: pan-y pan-x;
 }
 
 .scrollTrack:active {
@@ -250,6 +253,7 @@
     flex: 0 0 75vw;
     max-width: 300px;
     border-radius: var(--radius-md);
+    scroll-snap-align: center;
   }
 
   .cardImage {

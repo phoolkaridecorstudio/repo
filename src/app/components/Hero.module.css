@@ -19,7 +19,7 @@
   height: 100%;
   object-fit: cover;
   animation: kenburns 25s ease-in-out infinite;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .overlay {
@@ -27,10 +27,10 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(15, 10, 5, 0.85) 0%,
-    rgba(15, 10, 5, 0.70) 45%,
-    rgba(15, 10, 5, 0.3) 70%,
-    rgba(15, 10, 5, 0.1) 100%
+    rgba(15, 10, 5, 0.4) 0%,
+    rgba(15, 10, 5, 0.2) 45%,
+    transparent 70%,
+    transparent 100%
   );
 }
 
@@ -46,6 +46,17 @@
   pointer-events: none;
   z-index: 1;
   will-change: transform;
+}
+
+.bottomFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25vh;
+  background: linear-gradient(to bottom, transparent, var(--black));
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Split layout wrapper */
@@ -318,14 +329,14 @@
   .overlay {
     background: linear-gradient(
       180deg,
-      rgba(15, 10, 5, 0.4) 0%,
-      rgba(15, 10, 5, 0.7) 50%,
-      rgba(15, 10, 5, 0.85) 100%
+      transparent 0%,
+      rgba(15, 10, 5, 0.2) 50%,
+      rgba(15, 10, 5, 0.4) 100%
     );
   }
 
   .bgImg {
-    opacity: 0.75;
+    opacity: 1;
   }
 
   .textSide {
