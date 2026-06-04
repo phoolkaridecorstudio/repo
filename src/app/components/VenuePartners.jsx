@@ -8,7 +8,11 @@ const venueItems = [
   { name: 'Utsav The Forest Resort', src: '/images/logos/utsav.png' },
   { name: 'Moulsari Farms', src: '/images/logos/moulsari-new.png' },
   { name: 'Hazelnut Villas', src: '/images/logos/hazelnut.png' },
-  { name: 'Le Meridien', src: '/images/logos/lemeridien.png' }
+  { name: 'Le Meridien', src: '/images/logos/lemeridien.png' },
+  { name: 'JW Marriott', src: '/images/logos/jw-marriott.png' },
+  { name: 'Umaid Bhawan Palace', src: '/images/logos/umaid-bhawan.png' },
+  { name: 'Welcomhotel', src: '/images/logos/welcomhotel.png' },
+  { name: 'RAAS', src: '/images/logos/raas.png' }
 ];
 
 // Duplicate 4x for seamless infinite loop

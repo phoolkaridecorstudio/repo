@@ -15,7 +15,7 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       {/* Background Image with Ken Burns */}
       <div className={styles.bg}>
-        <Image src="/images/hero-bg.png" alt="Luxury event decoration by Phoolkari Decor Studio" fill priority className={styles.bgImg} />
+        <Image src="/images/hero-bg-new.jpg" alt="Luxury event decoration by Phoolkari Decor Studio" fill priority className={styles.bgImg} />
         <div className={styles.overlay} />
         <div className={styles.grain} />
         <Petals />
