@@ -375,6 +375,11 @@
     min-height: unset;
   }
 
+  .hero {
+    min-height: 65vh;
+    height: 65vh;
+  }
+
 
   .title {
     margin-bottom: 28px;

@@ -24,7 +24,7 @@ function ServiceCard({ service, index }) {
             src={service.image}
             alt={service.title}
             fill
-            sizes="(max-width: 768px) 80vw, 400px"
+            sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: 'cover' }}
           />
         </div>
@@ -46,41 +46,11 @@ function ServiceCard({ service, index }) {
 export default function Services() {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' });
-  
-  const trackRef = useRef(null);
-  const isDown = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const onMouseDown = (e) => {
-    isDown.current = true;
-    trackRef.current.classList.add(styles.active);
-    startX.current = e.pageX - trackRef.current.offsetLeft;
-    scrollLeft.current = trackRef.current.scrollLeft;
-  };
-
-  const onMouseLeave = () => {
-    isDown.current = false;
-    trackRef.current.classList.remove(styles.active);
-  };
-
-  const onMouseUp = () => {
-    isDown.current = false;
-    trackRef.current.classList.remove(styles.active);
-  };
-
-  const onMouseMove = (e) => {
-    if (!isDown.current) return;
-    e.preventDefault();
-    const x = e.pageX - trackRef.current.offsetLeft;
-    const walk = (x - startX.current) * 2; // scroll-fast multiplier
-    trackRef.current.scrollLeft = scrollLeft.current - walk;
-  };
 
   return (
     <section id="services" className={`section section--cream ${styles.services} lotus-pattern`}>
       <div className={`container ${styles.contentContainer}`} style={{ position: 'relative', zIndex: 2 }}>
-        {/* Left-aligned header with scroll hint */}
+        {/* Left-aligned header */}
         <div className={styles.headerArea}>
           <motion.div
             ref={headerRef}
@@ -97,30 +67,12 @@ export default function Services() {
             <div className="gold-divider" style={{ justifyContent: 'flex-start' }}>
               <span className="line" /><span className="dot" /><span className="line" />
             </div>
-            <p className="section-desc" style={{ margin: 0, textAlign: 'left' }}>From concept to creation, we handle every detail to deliver a flawless experience tailored to your unique celebration.</p>
-          </motion.div>
-
-          <motion.div
-            className={styles.scrollHint}
-            initial={{ opacity: 0 }}
-            animate={headerInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            Scroll to explore
-            <span className={styles.scrollHintLine} />
-            →
+            <p className="section-desc" style={{ margin: 0, textAlign: 'left', maxWidth: '600px' }}>From concept to creation, we handle every detail to deliver a flawless experience tailored to your unique celebration.</p>
           </motion.div>
         </div>
 
-        {/* Horizontal scroll track */}
-        <div 
-          className={styles.scrollTrack}
-          ref={trackRef}
-          onMouseDown={onMouseDown}
-          onMouseLeave={onMouseLeave}
-          onMouseUp={onMouseUp}
-          onMouseMove={onMouseMove}
-        >
+        {/* Grid layout for services */}
+        <div className={styles.servicesGrid}>
           {services.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
