@@ -1,6 +1,7 @@
 'use client';
 import styles from './Footer.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,12 +26,12 @@ export default function Footer() {
           <div>
             <h4 className={styles.heading}>Quick Links</h4>
             <ul className={styles.links}>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/themes">Themes</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/#contact">Contact</a></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/themes">Themes</Link></li>
+              <li><Link href="/gallery">Gallery</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/#contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -38,11 +39,11 @@ export default function Footer() {
           <div>
             <h4 className={styles.heading}>Services</h4>
             <ul className={styles.links}>
-              <li><a href="/services/wedding-decor">Wedding Decor</a></li>
-              <li><a href="/services/birthday-parties">Birthday Parties</a></li>
-              <li><a href="/services/corporate-events">Corporate Events</a></li>
-              <li><a href="/services/festival-decor">Festival Decor</a></li>
-              <li><a href="/themes">Theme Parties</a></li>
+              <li><Link href="/services/wedding-decor">Wedding Decor</Link></li>
+              <li><Link href="/services/birthday-parties">Birthday Parties</Link></li>
+              <li><Link href="/services/corporate-events">Corporate Events</Link></li>
+              <li><Link href="/services/festival-decor">Festival Decor</Link></li>
+              <li><Link href="/themes">Theme Parties</Link></li>
             </ul>
           </div>
 
@@ -73,9 +74,9 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>&copy; {currentYear} Phoolkari Decor Studio. All rights reserved.</p>
           <div className={styles.legalLinks}>
-            <a href="/terms">Terms &amp; Conditions</a>
+            <Link href="/terms">Terms &amp; Conditions</Link>
             <span className={styles.bottomDot} />
-            <a href="/privacy">Privacy Policy</a>
+            <Link href="/privacy">Privacy Policy</Link>
           </div>
           <p>
             Crafted with <span className={styles.heart}>♥</span> in Amritsar

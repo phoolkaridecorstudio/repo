@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../servicesPage.module.css';
 
 export const metadata = {
@@ -34,7 +35,7 @@ export default function BirthdayParties() {
 
         <div className={styles.intro}>
           <p className={styles.introText}>
-            Every milestone deserves a spectacular celebration. Whether it's a grand 50th anniversary, a magical 1st birthday, or a lavish sweet sixteen, Phoolkari Decor Studio brings your vision to life with custom-themed luxury decoration.
+            Every milestone deserves a spectacular celebration. Whether it&apos;s a grand 50th anniversary, a magical 1st birthday, or a lavish sweet sixteen, Phoolkari Decor Studio brings your vision to life with custom-themed luxury decoration.
           </p>
         </div>
 
@@ -50,9 +51,9 @@ export default function BirthdayParties() {
         <div className={styles.ctaBanner}>
           <h2 className={styles.ctaTitle}>Make Every <em>Moment</em> Count</h2>
           <p className={styles.ctaText}>
-            We don't just use standard props. Our studio custom-builds structures, neon signs, and backdrops tailored specifically to the guest of honor, ensuring your celebration is entirely unique and deeply personal.
+            We don&apos;t just use standard props. Our studio custom-builds structures, neon signs, and backdrops tailored specifically to the guest of honor, ensuring your celebration is entirely unique and deeply personal.
           </p>
-          <a href="/#contact" className="btn btn--gold">Plan Your Celebration</a>
+          <Link href="/" className="btn btn--gold">Plan Your Celebration</Link>
         </div>
       </main>
       <Contact />

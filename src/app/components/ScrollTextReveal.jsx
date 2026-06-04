@@ -2,6 +2,15 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
+function Word({ word, progress, start, end }) {
+  const opacity = useTransform(progress, [start, end], [0.2, 1]);
+  return (
+    <motion.span style={{ opacity, color: 'inherit', display: 'inline-block' }}>
+      {word}
+    </motion.span>
+  );
+}
+
 export default function ScrollTextReveal({ text, className = '' }) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -16,13 +25,7 @@ export default function ScrollTextReveal({ text, className = '' }) {
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + (1 / words.length);
-        const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1]);
-        
-        return (
-          <motion.span key={i} style={{ opacity, color: 'inherit', display: 'inline-block' }}>
-            {word}
-          </motion.span>
-        );
+        return <Word key={i} word={word} progress={scrollYProgress} start={start} end={end} />;
       })}
     </p>
   );

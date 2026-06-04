@@ -19,7 +19,14 @@ export default function HoverImageTrail({ children, images = [], maxItems = 12 }
     const imageSrc = images[indexRef.current % images.length];
     
     setTrail((prev) => {
-      const newTrail = [...prev, { id, x, y, src: imageSrc }];
+      const newTrail = [...prev, { 
+        id, 
+        x, 
+        y, 
+        src: imageSrc,
+        rotStart: Math.random() * 30 - 15,
+        rotEnd: Math.random() * 10 - 5
+      }];
       if (newTrail.length > maxItems) {
         return newTrail.slice(newTrail.length - maxItems);
       }
@@ -46,8 +53,8 @@ export default function HoverImageTrail({ children, images = [], maxItems = 12 }
             <motion.img
               key={item.id}
               src={item.src}
-              initial={{ opacity: 0, scale: 0.5, x: item.x - 70, y: item.y - 90, rotate: Math.random() * 30 - 15 }}
-              animate={{ opacity: 0.7, scale: 1, x: item.x - 70, y: item.y - 90, rotate: Math.random() * 10 - 5 }}
+              initial={{ opacity: 0, scale: 0.5, x: item.x - 70, y: item.y - 90, rotate: item.rotStart }}
+              animate={{ opacity: 0.7, scale: 1, x: item.x - 70, y: item.y - 90, rotate: item.rotEnd }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               style={{

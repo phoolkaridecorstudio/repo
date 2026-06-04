@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../servicesPage.module.css';
 
 export const metadata = {
@@ -52,7 +53,7 @@ export default function FestivalDecor() {
           <p className={styles.ctaText}>
             We source local, traditional materials and combine them with premium floral imports to create setups that feel both authentically cultural and undeniably luxurious. Our team deeply respects the cultural significance of your events and designs accordingly.
           </p>
-          <a href="/#contact" className="btn btn--gold">Inquire About Festival Decor</a>
+          <Link href="/" className="btn btn--gold">Inquire About Festival Decor</Link>
         </div>
       </main>
       <Contact />

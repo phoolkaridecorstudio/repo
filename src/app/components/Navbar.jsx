@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Ripple from './Ripple';
 
@@ -98,9 +99,9 @@ export default function Navbar() {
     <>
       <header className={`${styles.navbar} ${scrolled || pathname !== '/' ? styles.scrolled : ''}`}>
         <div className={styles.container}>
-          <a href="/" onClick={(e) => handleLinkClick(e, '/')} className={styles.logo}>
+          <Link href="/" onClick={(e) => handleLinkClick(e, '/')} className={styles.logo}>
             <Image src="/images/logo.svg" alt="Phoolkari Decor Studio" width={200} height={60} style={{ objectFit: 'contain' }} priority />
-          </a>
+          </Link>
 
           <nav className={styles.nav}>
             {navLinks.map((link) => (
@@ -115,10 +116,10 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a href="/#contact" className={`btn btn--gold ${styles.cta}`} onClick={(e) => handleLinkClick(e, '/#contact')}>
+          <Link href="/#contact" className={`btn btn--gold ${styles.cta}`} onClick={(e) => handleLinkClick(e, '/#contact')}>
             Book Consultation
             <Ripple />
-          </a>
+          </Link>
 
           <button
             className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
@@ -163,10 +164,10 @@ export default function Navbar() {
                   </motion.a>
                 ))}
               </nav>
-              <a href="/#contact" className="btn btn--gold" onClick={(e) => handleLinkClick(e, '/#contact')} style={{ width: '100%', marginTop: '2rem' }}>
+              <Link href="/#contact" className="btn btn--gold" onClick={(e) => handleLinkClick(e, '/#contact')} style={{ width: '100%', marginTop: '2rem' }}>
                 Book Consultation
                 <Ripple />
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         )}

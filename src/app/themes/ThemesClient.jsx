@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
@@ -75,7 +76,7 @@ export default function ThemesClient() {
                     ))}
                   </ul>
 
-                  <a href="/#contact" className="btn btn--gold">Inquire About This Theme</a>
+                  <Link href="/#contact" className="btn btn--gold">Inquire About This Theme</Link>
                 </div>
               </motion.div>
             ))}

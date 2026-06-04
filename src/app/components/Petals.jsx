@@ -16,9 +16,11 @@ export default function Petals() {
       duration: Math.random() * 5 + 10, // fall duration 10-15s
       rotationStart: Math.random() * 360,
       rotationEnd: Math.random() * 360 + 360,
+      xSway1: Math.random() * 100 - 50,
+      xSway2: Math.random() * 100 - 50,
       color: Math.random() > 0.5 ? '#eab308' : '#c5973e', // Marigold yellow and Gold
     }));
-    setPetals(generated);
+    setTimeout(() => setPetals(generated), 0);
   }, []);
 
   return (
@@ -42,7 +44,7 @@ export default function Petals() {
           animate={{
             y: '120vh',
             rotate: [petal.rotationStart, petal.rotationEnd],
-            x: [0, Math.random() * 100 - 50, Math.random() * 100 - 50, 0], // slight horizontal sway
+            x: [0, petal.xSway1, petal.xSway2, 0], // slight horizontal sway
           }}
           transition={{
             duration: petal.duration,

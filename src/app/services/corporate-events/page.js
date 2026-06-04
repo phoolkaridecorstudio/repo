@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../servicesPage.module.css';
 
 export const metadata = {
@@ -34,7 +35,7 @@ export default function CorporateEvents() {
 
         <div className={styles.intro}>
           <p className={styles.introText}>
-            Your corporate event is a direct reflection of your brand's prestige. At Phoolkari Decor Studio, we provide sophisticated, high-end decoration services for corporate clients across Punjab. From annual galas to professional conferences, we deliver environments that inspire.
+            Your corporate event is a direct reflection of your brand&apos;s prestige. At Phoolkari Decor Studio, we provide sophisticated, high-end decoration services for corporate clients across Punjab. From annual galas to professional conferences, we deliver environments that inspire.
           </p>
         </div>
 
@@ -52,7 +53,7 @@ export default function CorporateEvents() {
           <p className={styles.ctaText}>
             Corporate events require strict adherence to timelines and a deep understanding of brand aesthetics. Our highly trained team executes flawless setups with minimal disruption, working closely with event planners and hotel staff to ensure a seamless experience.
           </p>
-          <a href="/#contact" className="btn btn--gold">Inquire About Corporate Events</a>
+          <Link href="/" className="btn btn--gold">Inquire About Corporate Events</Link>
         </div>
       </main>
       <Contact />

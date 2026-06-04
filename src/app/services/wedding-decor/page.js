@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Contact from '../../components/Contact';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../servicesPage.module.css';
 
 export const metadata = {
@@ -34,7 +35,7 @@ export default function WeddingDecor() {
 
         <div className={styles.intro}>
           <p className={styles.introText}>
-            Your wedding day is one of the most significant moments of your life. At Phoolkari Decor Studio, we transform venues into breathtaking experiences that reflect your unique love story. As Amritsar's premier wedding decorators, we specialize in high-end, bespoke floral design and structural architecture.
+            Your wedding day is a masterpiece waiting to be painted. From intimate ceremonies to grand destination weddings, we create breathtaking environments tailored perfectly to your love story. Whether it&apos;s a vibrant Haldi setup, a royal Mandap, or a glamorous reception hall, our expertise guarantees an unforgettable experience.
           </p>
         </div>
 
@@ -50,9 +51,9 @@ export default function WeddingDecor() {
         <div className={styles.ctaBanner}>
           <h2 className={styles.ctaTitle}>Venues We <em>Transform</em></h2>
           <p className={styles.ctaText}>
-            We have extensive experience working with Punjab's top luxury venues, including Radisson Blu, Taj Swarna, Hyatt Amritsar, and various premium private farmhouses. Whether it is an intimate garden wedding or a grand ballroom reception, we know how to optimize the space.
+            We have extensive experience working with Punjab&apos;s top luxury venues, including Radisson Blu, Taj Swarna, Hyatt Amritsar, and various premium private farmhouses. Whether it is an intimate garden wedding or a grand ballroom reception, we know how to optimize the space.
           </p>
-          <a href="/#contact" className="btn btn--gold">Book Your Wedding Consultation</a>
+          <Link href="/#contact" className="btn btn--gold">Book Your Wedding Consultation</Link>
         </div>
       </main>
       <Contact />

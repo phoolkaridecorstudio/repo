@@ -9,7 +9,7 @@ export default function Preloader() {
 
   useEffect(() => {
     if (sessionStorage.getItem('preloader_shown')) {
-      setLoading(false);
+      setTimeout(() => setLoading(false), 0);
       return;
     }
 
