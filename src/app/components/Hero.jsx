@@ -9,7 +9,7 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       {/* Background Image with Ken Burns */}
       <div className={styles.bg}>
-        <Image src="/images/hero-bg-royal.jpg" alt="Luxury event decoration by Phoolkari Decor Studio" fill priority className={styles.bgImg} />
+        <Image src="/images/hero-bg-royal.jpg" alt="Luxury event decoration by Phoolkari Decor Studio" fill priority sizes="100vw" className={styles.bgImg} />
         <div className={styles.overlay} />
         <div className={styles.grain} />
         <Petals />

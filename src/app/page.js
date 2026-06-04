@@ -20,8 +20,8 @@ const CustomCursor = dynamic(() => import('./components/CustomCursor'));
 const VenuePartners = dynamic(() => import('./components/VenuePartners'));
 
 export const metadata = {
-  title: 'Phoolkari Decor Studio — Top Luxury Event Decorators in Amritsar',
-  description: 'Top-rated event and wedding decoration services in Punjab. Experience our majestic theme parties, premium floral mandaps, and bespoke corporate events.',
+  title: 'Phoolkari Decor Studio — Top Luxury Event Planners & Decorators in Amritsar',
+  description: 'Top-rated event planners and wedding decoration services in Amritsar, Punjab. Experience our majestic theme parties, premium floral mandaps, and bespoke corporate events.',
   alternates: {
     canonical: 'https://phoolkaridecorstudio.in',
   },

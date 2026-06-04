@@ -23,7 +23,7 @@ export default function CorporateEvents() {
       <Navbar />
       <main className={styles.servicePage}>
         <div className={styles.heroWrap}>
-          <Image src="/images/services/corporate-events.png" alt="Corporate Event Decoration by Phoolkari Decor Studio" fill style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/services/corporate-events.png" alt="Corporate Event Decoration by Phoolkari Decor Studio" fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="section-label">Our Services</span>

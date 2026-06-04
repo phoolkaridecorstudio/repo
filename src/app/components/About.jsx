@@ -52,7 +52,7 @@ export default function About() {
             </div>
 
             <p className={styles.text}>
-              At <strong>Phoolkari Decor Studio</strong>, we believe every celebration deserves to be extraordinary.
+              As Amritsar&apos;s premier <strong>Event Planners and Decorators</strong>, we believe every celebration deserves to be extraordinary.
               Rooted in the rich artistry of Punjabi Phoolkari tradition, we bring the same intricate craftsmanship
               and attention to detail to every event we design.
             </p>
