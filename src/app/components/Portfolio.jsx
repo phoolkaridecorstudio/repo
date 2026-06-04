@@ -5,7 +5,7 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import styles from './Portfolio.module.css';
 import { portfolioEvents as events } from '../data/content';
 
-const filters = ['all', 'wedding', 'celebration', 'corporate'];
+const filters = ['all', 'wedding', 'celebration', 'corporate', 'haldi', 'mehendi'];
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -76,8 +76,8 @@ export default function Portfolio() {
             </AnimatePresence>
           </motion.div>
 
-          <div style={{ textAlign: 'center', marginTop: '60px' }}>
-            <a href="/#contact" className="btn btn--gold">Discuss Your Event</a>
+          <div style={{ textAlign: 'center', margin: '60px auto 0', padding: '0 20px' }}>
+            <a href="/gallery" className="btn btn--gold">View Gallery</a>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 import { portfolioEvents } from '../data/content';
 import styles from './galleryPage.module.css';
 
-const categories = ['All', 'wedding', 'corporate', 'celebration'];
+const categories = ['All', 'wedding', 'corporate', 'celebration', 'haldi', 'mehendi'];
 
 export default function GalleryClient() {
   const [filter, setFilter] = useState('All');
