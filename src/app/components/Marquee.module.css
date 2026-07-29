@@ -141,3 +141,57 @@
   }
 }
 
+/* Vertical Scroll-Triggered Partner Logos */
+.partnerSection {
+  padding: 70px 0 100px 0;
+  background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 50%, var(--ivory) 100%);
+  border-top: 1px solid rgba(197, 151, 62, 0.12);
+  border-bottom: 1px solid rgba(197, 151, 62, 0.12);
+}
+
+.partnerList {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.partnerLogoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.partnerLogoWrap {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .partnerSection {
+    padding: 50px 0 70px 0;
+  }
+
+  .partnerList {
+    gap: 60px;
+  }
+
+  .partnerLogoWrap {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partnerList {
+    gap: 50px;
+  }
+
+  .partnerLogoWrap {
+    height: 120px;
+  }
+}
+
