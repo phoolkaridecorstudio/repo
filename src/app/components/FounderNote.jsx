@@ -20,16 +20,19 @@ export default function FounderNote() {
           &ldquo;
         </motion.div>
 
-        {/* Quote */}
+        {/* Quote & Primary Heading */}
         <motion.div
           className={styles.quoteWrapper}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className={styles.quote}>
+          <span className="section-label" style={{ marginBottom: '16px', display: 'inline-block' }}>
+            Luxury Wedding Decorators &amp; Event Planners in Amritsar
+          </span>
+          <h1 className={styles.quote}>
             Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
-          </p>
+          </h1>
         </motion.div>
 
         {/* Divider */}

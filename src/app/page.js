@@ -23,7 +23,7 @@ export const metadata = {
   title: 'Phoolkari Decor Studio — Top Luxury Event Planners & Decorators in Amritsar',
   description: 'Top-rated event planners and wedding decoration services in Amritsar, Punjab. Experience our majestic theme parties, premium floral mandaps, and bespoke corporate events.',
   alternates: {
-    canonical: 'https://phoolkaridecorstudio.in',
+    canonical: 'https://www.phoolkaridecorstudio.in',
   },
 };
 

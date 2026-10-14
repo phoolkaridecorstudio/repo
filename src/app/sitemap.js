@@ -1,20 +1,21 @@
 import { blogsData } from './data/blogs';
 
 export default function sitemap() {
-  const baseUrl = 'https://phoolkaridecorstudio.in';
+  const baseUrl = 'https://www.phoolkaridecorstudio.in';
 
   const staticRoutes = [
     '',
     '/about',
-    '/themes',
-    '/gallery',
-    '/terms',
-    '/privacy',
+    '/services',
     '/services/wedding-decor',
     '/services/corporate-events',
     '/services/birthday-parties',
     '/services/festival-decor',
+    '/themes',
+    '/gallery',
     '/blog',
+    '/terms',
+    '/privacy',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

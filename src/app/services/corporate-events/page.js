@@ -8,7 +8,7 @@ import styles from '../servicesPage.module.css';
 export const metadata = {
   title: 'Corporate Event Decorators in Amritsar | Phoolkari',
   description: 'Professional corporate event decoration and planning in Punjab. We design elegant conference setups, product launches, galas, and award ceremonies.',
-  alternates: { canonical: 'https://phoolkaridecorstudio.in/services/corporate-events' }
+  alternates: { canonical: 'https://www.phoolkaridecorstudio.in/services/corporate-events' }
 };
 
 const features = [
@@ -18,13 +18,44 @@ const features = [
   { title: 'Festive Office Decor', desc: 'Premium floral and lighting installations for your office space during Diwali, Christmas, and New Year.' },
 ];
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Corporate Event Planners & Decorators in Amritsar',
+  serviceType: 'Corporate Event Management & Decoration',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Phoolkari Decor Studio',
+    url: 'https://www.phoolkaridecorstudio.in',
+    image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
+    telephone: ['+91-91557-03155', '+91-96990-33155'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Amritsar',
+      addressRegion: 'Punjab',
+      addressCountry: 'IN',
+    },
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Amritsar, Punjab, India',
+  },
+  description:
+    'High-end corporate event decoration in Amritsar and across Punjab. Specializing in award ceremonies, gala dinners, annual conferences, and brand launches.',
+  url: 'https://www.phoolkaridecorstudio.in/services/corporate-events',
+};
+
 export default function CorporateEvents() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.servicePage}>
         <div className={styles.heroWrap}>
-          <Image src="/images/services/corporate-events.png" alt="Corporate Event Decoration by Phoolkari Decor Studio" fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/services/corporate-events.webp" alt="Corporate Event Decoration by Phoolkari Decor Studio" fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="section-label">Our Services</span>
@@ -53,7 +84,7 @@ export default function CorporateEvents() {
           <p className={styles.ctaText}>
             Corporate events require strict adherence to timelines and a deep understanding of brand aesthetics. Our highly trained team executes flawless setups with minimal disruption, working closely with event planners and hotel staff to ensure a seamless experience.
           </p>
-          <Link href="/" className="btn btn--gold">Inquire About Corporate Events</Link>
+          <Link href="#contact" className="btn btn--gold">Inquire About Corporate Events</Link>
         </div>
       </main>
       <Contact />

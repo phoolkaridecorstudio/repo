@@ -8,7 +8,7 @@ import styles from '../servicesPage.module.css';
 export const metadata = {
   title: 'Luxury Wedding Decorators in Amritsar | Phoolkari',
   description: 'Top-rated luxury wedding decoration services in Punjab. We specialize in royal mandap designs, floral cascades, and premium stage setups at top hotels and farmhouses.',
-  alternates: { canonical: 'https://phoolkaridecorstudio.in/services/wedding-decor' }
+  alternates: { canonical: 'https://www.phoolkaridecorstudio.in/services/wedding-decor' }
 };
 
 const features = [
@@ -18,13 +18,44 @@ const features = [
   { title: 'Entrance & Walkway', desc: 'Grand welcome arches and candle-lit pathways to leave a lasting first impression on your guests.' },
 ];
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Luxury Wedding Decorators in Amritsar',
+  serviceType: 'Wedding Decoration & Planning',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Phoolkari Decor Studio',
+    url: 'https://www.phoolkaridecorstudio.in',
+    image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
+    telephone: ['+91-91557-03155', '+91-96990-33155'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Amritsar',
+      addressRegion: 'Punjab',
+      addressCountry: 'IN',
+    },
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Amritsar, Punjab, India',
+  },
+  description:
+    'Top-rated luxury wedding decoration services in Punjab specializing in royal mandap designs, floral cascades, and premium stage setups.',
+  url: 'https://www.phoolkaridecorstudio.in/services/wedding-decor',
+};
+
 export default function WeddingDecor() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.servicePage}>
         <div className={styles.heroWrap}>
-          <Image src="/images/services/wedding-decor.png" alt="Luxury Wedding Decor by Phoolkari Decor Studio" fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/services/wedding-decor.webp" alt="Luxury Wedding Decor by Phoolkari Decor Studio" fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="section-label">Our Services</span>
@@ -53,7 +84,7 @@ export default function WeddingDecor() {
           <p className={styles.ctaText}>
             We have extensive experience working with Punjab&apos;s top luxury venues, including Radisson Blu, Taj Swarna, Hyatt Amritsar, and various premium private farmhouses. Whether it is an intimate garden wedding or a grand ballroom reception, we know how to optimize the space.
           </p>
-          <Link href="/#contact" className="btn btn--gold">Book Your Wedding Consultation</Link>
+          <Link href="#contact" className="btn btn--gold">Book Your Wedding Consultation</Link>
         </div>
       </main>
       <Contact />

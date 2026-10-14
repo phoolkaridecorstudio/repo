@@ -34,7 +34,7 @@ export default function AboutClient() {
         <section className={styles.hero}>
           <div className={styles.heroImageWrap}>
             <Image 
-              src="/images/portfolio/event-5.png" 
+              src="/images/portfolio/event-5.webp" 
               alt="Phoolkari Decor Studio luxury event setup" 
               fill 
               style={{ objectFit: 'cover' }} 

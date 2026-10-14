@@ -16,7 +16,7 @@ export default function Preloader() {
     const timer = setTimeout(() => {
       setLoading(false);
       sessionStorage.setItem('preloader_shown', 'true');
-    }, 2000);
+    }, 500);
     
     return () => clearTimeout(timer);
   }, []);
@@ -33,9 +33,9 @@ export default function Preloader() {
             className={styles.logoWrap}
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <Image src="/images/logo.svg" alt="Phoolkari Decor Studio" width={260} height={120} style={{ objectFit: 'contain' }} priority />
+            <Image src="/images/logo.png" alt="Phoolkari Decor Studio" width={260} height={120} style={{ objectFit: 'contain' }} priority />
           </motion.div>
         </motion.div>
       )}

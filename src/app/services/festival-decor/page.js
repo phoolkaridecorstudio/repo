@@ -8,7 +8,7 @@ import styles from '../servicesPage.module.css';
 export const metadata = {
   title: 'Festival & Cultural Event Decor in Amritsar | Phoolkari',
   description: 'Authentic and luxurious festival decoration services in Punjab. We design stunning setups for Diwali, Lohri, Eid, and cultural celebrations.',
-  alternates: { canonical: 'https://phoolkaridecorstudio.in/services/festival-decor' }
+  alternates: { canonical: 'https://www.phoolkaridecorstudio.in/services/festival-decor' }
 };
 
 const features = [
@@ -18,13 +18,44 @@ const features = [
   { title: 'Eid & Cultural Events', desc: 'Rich, ornate decorations blending traditional motifs with modern luxury for multicultural celebrations across Punjab.' },
 ];
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Festival & Cultural Event Decoration in Amritsar',
+  serviceType: 'Festive & Cultural Event Decoration',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Phoolkari Decor Studio',
+    url: 'https://www.phoolkaridecorstudio.in',
+    image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
+    telephone: ['+91-91557-03155', '+91-96990-33155'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Amritsar',
+      addressRegion: 'Punjab',
+      addressCountry: 'IN',
+    },
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Amritsar, Punjab, India',
+  },
+  description:
+    'Grand festive and cultural event decoration services in Amritsar and across Punjab. Specialized setups for Diwali galas, Lohri, Vaisakhi, and spiritual ceremonies.',
+  url: 'https://www.phoolkaridecorstudio.in/services/festival-decor',
+};
+
 export default function FestivalDecor() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.servicePage}>
         <div className={styles.heroWrap}>
-          <Image src="/images/services/festival-decor.png" alt="Festival and Cultural Decoration by Phoolkari Decor Studio" fill style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/services/festival-decor.webp" alt="Festival and Cultural Decoration by Phoolkari Decor Studio" fill style={{ objectFit: 'cover' }} priority />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="section-label">Our Services</span>
@@ -53,7 +84,7 @@ export default function FestivalDecor() {
           <p className={styles.ctaText}>
             We source local, traditional materials and combine them with premium floral imports to create setups that feel both authentically cultural and undeniably luxurious. Our team deeply respects the cultural significance of your events and designs accordingly.
           </p>
-          <Link href="/" className="btn btn--gold">Inquire About Festival Decor</Link>
+          <Link href="#contact" className="btn btn--gold">Inquire About Festival Decor</Link>
         </div>
       </main>
       <Contact />

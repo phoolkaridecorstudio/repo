@@ -27,10 +27,10 @@ export async function generateMetadata({ params }) {
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
-      images: [{ url: `https://phoolkaridecorstudio.in${post.image}` }],
+      images: [{ url: `https://www.phoolkaridecorstudio.in${post.image}` }],
     },
     alternates: {
-      canonical: `https://phoolkaridecorstudio.in/blog/${post.slug}`,
+      canonical: `https://www.phoolkaridecorstudio.in/blog/${post.slug}`,
     }
   };
 }
@@ -43,12 +43,18 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  // 3. Generate Article JSON-LD Schema for Google
+  // 3. Generate BlogPosting JSON-LD Schema for Google
+  const postUrl = `https://www.phoolkaridecorstudio.in/blog/${post.slug}`;
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
-    image: `https://phoolkaridecorstudio.in${post.image}`,
+    image: `https://www.phoolkaridecorstudio.in${post.image}`,
+    url: postUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
     author: {
       '@type': 'Person',
       name: post.author,
@@ -56,9 +62,10 @@ export default async function BlogPostPage({ params }) {
     publisher: {
       '@type': 'Organization',
       name: 'Phoolkari Decor Studio',
+      url: 'https://www.phoolkaridecorstudio.in',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://phoolkaridecorstudio.in/images/logo.svg',
+        url: 'https://www.phoolkaridecorstudio.in/images/logo.png',
       },
     },
     datePublished: new Date(post.date).toISOString(),

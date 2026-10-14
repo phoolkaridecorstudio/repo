@@ -77,13 +77,18 @@ export default function FAQ() {
                 className={styles.faqQuestion} 
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
+                id={`faq-question-${index}`}
               >
                 {faq.question}
-                <span className={`${styles.faqIcon} ${openIndex === index ? styles.faqIconOpen : ''}`}>+</span>
+                <span className={`${styles.faqIcon} ${openIndex === index ? styles.faqIconOpen : ''}`} aria-hidden="true">+</span>
               </button>
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

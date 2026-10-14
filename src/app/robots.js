@@ -4,6 +4,7 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://phoolkaridecorstudio.in/sitemap.xml',
+    sitemap: 'https://www.phoolkaridecorstudio.in/sitemap.xml',
+    host: 'https://www.phoolkaridecorstudio.in',
   };
 }

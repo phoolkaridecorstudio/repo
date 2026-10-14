@@ -145,21 +145,21 @@ Looking forward to discussing this further!`;
           >
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
-                <input type="text" name="name" placeholder=" " required />
-                <label>Your Name</label>
+                <input id="contact-name" type="text" name="name" placeholder=" " autoComplete="name" required />
+                <label htmlFor="contact-name">Your Name</label>
               </div>
               <div className={styles.formGroup}>
-                <input type="tel" name="phone" placeholder=" " required />
-                <label>Phone Number</label>
+                <input id="contact-phone" type="tel" name="phone" placeholder=" " autoComplete="tel" required />
+                <label htmlFor="contact-phone">Phone Number</label>
               </div>
             </div>
             <div className={styles.formGroup}>
-              <input type="email" name="email" placeholder=" " required />
-              <label>Email Address</label>
+              <input id="contact-email" type="email" name="email" placeholder=" " autoComplete="email" required />
+              <label htmlFor="contact-email">Email Address</label>
             </div>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
-                <select name="event" defaultValue="" required>
+                <select id="contact-event" name="event" defaultValue="" required>
                   <option value="" disabled>Select event type</option>
                   <option>Wedding</option>
                   <option>Birthday / Anniversary</option>
@@ -168,16 +168,16 @@ Looking forward to discussing this further!`;
                   <option>Theme Party</option>
                   <option>Other</option>
                 </select>
-                <label>Event Type</label>
+                <label htmlFor="contact-event">Event Type</label>
               </div>
               <div className={styles.formGroup}>
-                <input type="date" name="date" placeholder=" " />
-                <label>Event Date</label>
+                <input id="contact-date" type="date" name="date" placeholder=" " />
+                <label htmlFor="contact-date">Event Date</label>
               </div>
             </div>
             <div className={styles.formGroup}>
-              <textarea name="message" rows="4" placeholder=" " required></textarea>
-              <label>Tell Us About Your Vision</label>
+              <textarea id="contact-message" name="message" rows="4" placeholder=" " required></textarea>
+              <label htmlFor="contact-message">Tell Us About Your Vision</label>
             </div>
 
             <button type="submit" className="btn btn--gold btn--full" disabled={sending}>

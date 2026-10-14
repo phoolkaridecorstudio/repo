@@ -4,10 +4,49 @@ export const metadata = {
   title: 'Our Services | Phoolkari Decor Studio',
   description: 'Explore our luxury event decoration services in Amritsar. From majestic wedding mandaps to sophisticated corporate events and themed birthday parties.',
   alternates: {
-    canonical: 'https://phoolkaridecorstudio.in/services',
+    canonical: 'https://www.phoolkaridecorstudio.in/services',
   }
 };
 
+const servicesHubSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Luxury Event Decoration Services | Phoolkari Decor Studio',
+  description:
+    'Explore our luxury event decoration services in Amritsar. From majestic wedding mandaps to sophisticated corporate events and themed birthday parties.',
+  url: 'https://www.phoolkaridecorstudio.in/services',
+  hasPart: [
+    {
+      '@type': 'Service',
+      name: 'Luxury Wedding Decor',
+      url: 'https://www.phoolkaridecorstudio.in/services/wedding-decor',
+    },
+    {
+      '@type': 'Service',
+      name: 'Corporate Events Decor',
+      url: 'https://www.phoolkaridecorstudio.in/services/corporate-events',
+    },
+    {
+      '@type': 'Service',
+      name: 'Birthday & Anniversary Decor',
+      url: 'https://www.phoolkaridecorstudio.in/services/birthday-parties',
+    },
+    {
+      '@type': 'Service',
+      name: 'Festival & Cultural Decor',
+      url: 'https://www.phoolkaridecorstudio.in/services/festival-decor',
+    },
+  ],
+};
+
 export default function ServicesPage() {
-  return <ServicesClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesHubSchema) }}
+      />
+      <ServicesClient />
+    </>
+  );
 }

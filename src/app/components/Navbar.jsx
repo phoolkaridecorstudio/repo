@@ -100,7 +100,7 @@ export default function Navbar() {
       <header className={`${styles.navbar} ${scrolled || pathname !== '/' ? styles.scrolled : ''}`}>
         <div className={styles.container}>
           <Link href="/" onClick={(e) => handleLinkClick(e, '/')} className={styles.logo}>
-            <Image src="/images/logo.svg" alt="Phoolkari Decor Studio" width={200} height={60} style={{ objectFit: 'contain' }} priority />
+            <Image src="/images/logo.png" alt="Phoolkari Decor Studio" width={200} height={60} style={{ objectFit: 'contain' }} priority />
           </Link>
 
           <nav className={styles.nav}>
@@ -148,7 +148,7 @@ export default function Navbar() {
               exit={{ y: 40, opacity: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              <Image src="/images/logo.svg" alt="Phoolkari Decor Studio" width={180} height={50} className={styles.mobileLogo} style={{ objectFit: 'contain' }} priority />
+              <Image src="/images/logo.png" alt="Phoolkari Decor Studio" width={180} height={50} className={styles.mobileLogo} style={{ objectFit: 'contain' }} priority />
               <nav className={styles.mobileNav}>
                 {navLinks.map((link, i) => (
                   <motion.a

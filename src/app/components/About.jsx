@@ -10,16 +10,19 @@ function Counter({ target, suffix = '+', delay = 0 }) {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <span ref={ref} className={styles.statNumber}>
-      {inView ? (
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3, delay }}
-        >
-          <NumberCounter to={target} suffix={suffix} duration={2} />
-        </motion.span>
-      ) : '0' + suffix}
+    <span ref={ref} className={styles.statNumber} aria-label={`${target}${suffix}`}>
+      <span className={styles.srOnly}>{target}{suffix}</span>
+      <span aria-hidden="true">
+        {inView ? (
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay }}
+          >
+            <NumberCounter to={target} suffix={suffix} duration={2} />
+          </motion.span>
+        ) : `${target}${suffix}`}
+      </span>
     </span>
   );
 }
@@ -76,7 +79,7 @@ export default function About() {
           >
             <motion.div className={styles.heroImage} style={{ y: imageY }}>
               <Image
-                src="/images/portfolio/event-1.png"
+                src="/images/portfolio/event-1.webp"
                 alt="Luxury Wedding Decor"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -24,9 +24,9 @@ export const blogsData = [
       <p>Eco-conscious choices are becoming increasingly important. At Phoolkari Decor Studio, we are leading this charge by offering options for potted plant decor that can be replanted post-wedding, and utilizing biodegradable floral foams and sustainable structural materials without compromising on the luxury aesthetic.</p>
 
       <h2>Planning Your Dream Wedding?</h2>
-      <p>If you're planning a wedding in Amritsar or anywhere in Punjab, our team at Phoolkari Decor Studio is here to turn these trends into reality for your special day. <a href="/#contact">Contact us today</a> for a consultation.</p>
+      <p>If you're planning a wedding in Amritsar or anywhere in Punjab, our team at Phoolkari Decor Studio is here to turn these trends into reality for your special day. Explore our <a href="/services/wedding-decor">luxury wedding decor services</a> or <a href="/#contact">contact us today</a> for a consultation.</p>
     `,
-    image: '/images/portfolio/event-2.png',
+    image: '/images/portfolio/event-2.webp',
     date: 'May 15, 2024',
     author: 'Mukesh N Aggarwal',
     readTime: '4 min read',
@@ -59,7 +59,7 @@ export const blogsData = [
 
       <p>Still unsure which venue is right for your vision? We offer venue consultation as part of our comprehensive decor planning services. Let's find your perfect match.</p>
     `,
-    image: '/images/portfolio/event-1.png',
+    image: '/images/portfolio/event-1.webp',
     date: 'April 28, 2024',
     author: 'Phoolkari Editorial Team',
     readTime: '5 min read',
@@ -88,7 +88,7 @@ export const blogsData = [
 
       <p>When you walk into a Phoolkari decorated event and the fragrance hits you, and you see the sheer scale of the floral artistry, you are witnessing the culmination of weeks of planning and decades of combined expertise.</p>
     `,
-    image: '/images/portfolio/event-4.png',
+    image: '/images/portfolio/event-4.webp',
     date: 'April 10, 2024',
     author: 'Mukesh N Aggarwal',
     readTime: '4 min read',
@@ -115,7 +115,7 @@ export const blogsData = [
       <h3>The Statement Backdrop</h3>
       <p>The backdrop where the bride and groom sit is the focal point of all photographs. We design elaborate floral rings, oversized lotus motifs made of fresh flowers, or custom-painted wooden structures that frame the couple beautifully.</p>
 
-      <p>Whether you want a traditional marigold explosion or a modern, subtle floral setup, our team can design a Haldi space that is as vibrant as your celebration.</p>
+      <p>Whether you want a traditional marigold explosion or a modern, subtle floral setup, our team can design a Haldi space that is as vibrant as your celebration. Explore our custom <a href="/services/wedding-decor">wedding decor services</a> or browse our <a href="/gallery">portfolio gallery</a> for more inspiration.</p>
     `,
     image: '/images/themes/enchanted-garden.png',
     date: 'March 22, 2024',
@@ -144,9 +144,9 @@ export const blogsData = [
       <h3>The Importance of Lighting and AV</h3>
       <p>For corporate events, audio-visual quality is non-negotiable. Crisp sound, clear LED walls, and dynamic stage lighting are essential for presentations and award ceremonies. We work closely with top technical teams to ensure the physical decor and the technical setup work in perfect harmony.</p>
 
-      <p>Planning a corporate event requires precision, professionalism, and a keen eye for detail. Trust the experts at Phoolkari Decor Studio to deliver an event that perfectly represents your corporate identity.</p>
+      <p>Planning a corporate event requires precision, professionalism, and a keen eye for detail. Trust the experts at Phoolkari Decor Studio to deliver an event that perfectly represents your corporate identity. Discover our complete <a href="/services/corporate-events">corporate event management services</a> or get in touch for a customized proposal.</p>
     `,
-    image: '/images/portfolio/event-3.png',
+    image: '/images/portfolio/event-3.webp',
     date: 'March 05, 2024',
     author: 'Mukesh N Aggarwal',
     readTime: '4 min read',
@@ -173,7 +173,7 @@ export const blogsData = [
       <h3>Lighting the Palace</h3>
       <p>Lighting is crucial to bringing the structure to life. We use a combination of crystal chandeliers hanging from the center of the dome, warm uplighting on the pillars, and hundreds of real candles or traditional brass diyas surrounding the base to create a warm, golden glow.</p>
 
-      <p>A royal mandap is more than just a decoration; it's an architectural masterpiece. Contact Phoolkari Decor Studio to design a mandap fit for royalty.</p>
+      <p>A royal mandap is more than just a decoration; it's an architectural masterpiece. Browse our <a href="/services/wedding-decor">mandap and stage decor services</a> or contact Phoolkari Decor Studio to design a mandap fit for royalty.</p>
     `,
     image: '/images/themes/royal-rajasthani.png',
     date: 'February 18, 2024',
@@ -198,7 +198,7 @@ export const blogsData = [
 
       <p>Whether you are hosting an event at a 5-star hotel or a sprawling private estate, finding the right luxury wedding decorators in Punjab is crucial for a flawless execution.</p>
     `,
-    image: '/images/portfolio/event-5.png',
+    image: '/images/portfolio/event-5.webp',
     date: 'May 20, 2024',
     author: 'Phoolkari Editorial Team',
     readTime: '3 min read',
@@ -242,7 +242,7 @@ export const blogsData = [
       <h3>Event Infrastructure Rental</h3>
       <p>For farmhouse weddings, a premium tent house provides the necessary infrastructure—from luxury mobile restrooms to catering shamianas. At Phoolkari, we coordinate seamlessly with event tent rental providers to ensure the structural integrity matches our high-end decor standards.</p>
     `,
-    image: '/images/portfolio/event-2.png',
+    image: '/images/portfolio/event-2.webp',
     date: 'June 02, 2024',
     author: 'Phoolkari Editorial Team',
     readTime: '4 min read',
@@ -288,7 +288,7 @@ export const blogsData = [
       <h3>Wedding Decoration Packages</h3>
       <p>While some decorators offer fixed affordable wedding decor packages, premium wedding decor companies in Punjab operate on customized quotes. Expect to invest a significant portion of your wedding budget to achieve that magazine-cover look.</p>
     `,
-    image: '/images/portfolio/event-1.png',
+    image: '/images/portfolio/event-1.webp',
     date: 'June 15, 2024',
     author: 'Phoolkari Editorial Team',
     readTime: '5 min read',
@@ -309,7 +309,7 @@ export const blogsData = [
       <h3>Reception Decoration</h3>
       <p>Receptions are evening affairs requiring sophistication. Reception decoration in Punjab leans heavily towards elegant whites, deep reds, or soft pastels. We use premium roses, hydrangeas, and baby's breath to create luxurious, cascading centerpieces and massive floral photo backdrops.</p>
     `,
-    image: '/images/portfolio/event-4.png',
+    image: '/images/portfolio/event-4.webp',
     date: 'June 22, 2024',
     author: 'Mukesh N Aggarwal',
     readTime: '3 min read',
@@ -330,7 +330,7 @@ export const blogsData = [
       <h3>Gala Dinners and Award Ceremonies</h3>
       <p>When the business day ends, the celebration begins. We transform standard hotel ballrooms into spectacular venues for award ceremony decoration, utilizing intelligent lighting, elegant table scaping, and sophisticated floral designs.</p>
     `,
-    image: '/images/portfolio/event-3.png',
+    image: '/images/portfolio/event-3.webp',
     date: 'July 05, 2024',
     author: 'Phoolkari Editorial Team',
     readTime: '4 min read',
@@ -343,7 +343,7 @@ export const blogsData = [
     excerpt: 'Explore the latest trends in Wedding Stage Decoration and Mandap designs, the focal points of any grand Indian wedding.',
     content: `
       <h2>The Center of Attention</h2>
-      <p>At any Indian wedding, the Stage and the Mandap are the absolute focal points. Every guest will look at them, and every photograph will feature them. This is where wedding stage decoration in Punjab truly becomes an art form.</p>
+      <p>At any Indian wedding, the Stage and the Mandap are the absolute focal points. Every guest will look at them, and every photograph will feature them. Explore our dedicated <a href="/services/wedding-decor">wedding stage & mandap decoration</a> options to create an unforgettable centerpiece.</p>
       
       <h3>Wedding Mandap Decoration</h3>
       <p>The Mandap is sacred. Traditional designs use heavy floral domes and brass bells, while modern couples prefer open-air structures made of clear acrylic adorned with imported white blooms. As leading wedding decorators, we ensure the Mandap reflects both tradition and the couple's personal style.</p>
@@ -364,7 +364,7 @@ export const blogsData = [
     excerpt: 'Why luxury decor isn\'t just for weddings. How we style high-end birthday parties, baby showers, and anniversaries in Punjab.',
     content: `
       <h2>Celebrating Life's Milestones</h2>
-      <p>Luxury event styling is not limited to weddings. We are seeing a massive surge in demand for premium birthday party decoration in Punjab, as well as grand anniversary celebrations and baby showers.</p>
+      <p>Luxury event styling is not limited to weddings. We are seeing a massive surge in demand for premium <a href="/services/birthday-parties">birthday party decoration</a> in Punjab, as well as grand anniversary celebrations and milestone baby showers.</p>
       
       <h3>Themed Birthday Parties</h3>
       <p>For children and adults alike, themed parties are incredibly popular. From recreating a specific movie universe to designing an elegant "Roaring 20s" speakeasy for a 50th birthday, an event decor company can bring any fantasy to life.</p>
@@ -372,7 +372,7 @@ export const blogsData = [
       <h3>Anniversary and Ring Ceremony Decoration</h3>
       <p>Silver and Golden anniversaries, as well as Ring Ceremonies, deserve to be celebrated with elegance. We create intimate, sophisticated environments using soft lighting, luxury table linens, and bespoke floral centerpieces, proving that we are more than just wedding organizers.</p>
     `,
-    image: '/images/portfolio/event-5.png',
+    image: '/images/portfolio/event-5.webp',
     date: 'July 18, 2024',
     author: 'Phoolkari Editorial Team',
     readTime: '3 min read',
@@ -395,7 +395,7 @@ export const blogsData = [
       
       <p>Choosing the right event management company near me is the first step towards a stress-free, visually spectacular celebration.</p>
     `,
-    image: '/images/portfolio/event-1.png',
+    image: '/images/portfolio/event-1.webp',
     date: 'July 25, 2024',
     author: 'Mukesh N Aggarwal',
     readTime: '4 min read',

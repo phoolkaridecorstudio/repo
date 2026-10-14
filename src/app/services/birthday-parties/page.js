@@ -8,7 +8,7 @@ import styles from '../servicesPage.module.css';
 export const metadata = {
   title: 'Luxury Birthday & Anniversary Decor in Amritsar | Phoolkari',
   description: 'Premium birthday and anniversary decoration services. We specialize in custom themes, luxury balloon artistry, and milestone celebrations in Punjab.',
-  alternates: { canonical: 'https://phoolkaridecorstudio.in/services/birthday-parties' }
+  alternates: { canonical: 'https://www.phoolkaridecorstudio.in/services/birthday-parties' }
 };
 
 const features = [
@@ -18,13 +18,44 @@ const features = [
   { title: 'Custom Fabrication', desc: 'We custom-build structures, neon signs, and backdrops tailored specifically to the guest of honor for a truly unique celebration.' },
 ];
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Birthday & Anniversary Party Decoration in Amritsar',
+  serviceType: 'Birthday & Anniversary Event Decoration',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Phoolkari Decor Studio',
+    url: 'https://www.phoolkaridecorstudio.in',
+    image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
+    telephone: ['+91-91557-03155', '+91-96990-33155'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Amritsar',
+      addressRegion: 'Punjab',
+      addressCountry: 'IN',
+    },
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Amritsar, Punjab, India',
+  },
+  description:
+    'Luxury birthday and anniversary decoration in Amritsar. Customized balloon styling, themed kids parties, neon backdrops, and romantic anniversary setups.',
+  url: 'https://www.phoolkaridecorstudio.in/services/birthday-parties',
+};
+
 export default function BirthdayParties() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className={styles.servicePage}>
         <div className={styles.heroWrap}>
-          <Image src="/images/services/birthday-decor.png" alt="Birthday and Anniversary Decoration by Phoolkari Decor Studio" fill style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/services/birthday-decor.webp" alt="Birthday and Anniversary Decoration by Phoolkari Decor Studio" fill style={{ objectFit: 'cover' }} priority />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="section-label">Our Services</span>
@@ -53,7 +84,7 @@ export default function BirthdayParties() {
           <p className={styles.ctaText}>
             We don&apos;t just use standard props. Our studio custom-builds structures, neon signs, and backdrops tailored specifically to the guest of honor, ensuring your celebration is entirely unique and deeply personal.
           </p>
-          <Link href="/" className="btn btn--gold">Plan Your Celebration</Link>
+          <Link href="#contact" className="btn btn--gold">Plan Your Celebration</Link>
         </div>
       </main>
       <Contact />

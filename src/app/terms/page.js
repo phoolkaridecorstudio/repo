@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Terms & Conditions | Phoolkari Decor Studio',
   description: 'Read the terms and conditions for booking luxury event decoration services with Phoolkari Decor Studio in Amritsar, Punjab.',
   alternates: {
-    canonical: 'https://phoolkaridecorstudio.in/terms',
+    canonical: 'https://www.phoolkaridecorstudio.in/terms',
   }
 };
 
