@@ -59,6 +59,95 @@
   pointer-events: none;
 }
 
+/* Center luxury branding presentation */
+.heroCenter {
+  position: relative;
+  z-index: 3;
+  margin: auto;
+  max-width: 900px;
+  padding: 0 1.5rem;
+  padding-top: calc(var(--nav-height) + 1rem);
+  padding-bottom: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTaglineBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.heroTaglineLine {
+  width: 36px;
+  height: 1px;
+  background: var(--gold-muted);
+}
+
+.heroTaglineText {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.heroMainTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.65);
+}
+
+.heroScript {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.25em;
+  background: linear-gradient(
+    90deg,
+    var(--gold-light) 0%,
+    var(--gold-pale) 30%,
+    var(--gold) 50%,
+    var(--gold-pale) 70%,
+    var(--gold-light) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 5s linear infinite;
+  display: inline-block;
+  padding: 0 0.15em;
+}
+
+.heroSubtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.8vw, 1.15rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 36px;
+  max-width: 640px;
+  line-height: 1.7;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
 /* Split layout wrapper */
 .content {
   position: relative;
@@ -367,17 +456,52 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+    min-height: 90dvh;
+    height: auto;
+  }
+
+  .heroCenter {
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 5rem;
+  }
+
+  .heroMainTitle {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+    margin-bottom: 14px;
+  }
+
+  .heroSubtitle {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .heroTaglineText {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    gap: 12px;
+  }
+
+  .heroActions a {
+    width: 100%;
+    text-align: center;
+  }
+
   .content {
     padding: 0 var(--container-pad);
     padding-top: calc(var(--nav-height) + 16px);
     padding-bottom: 40px;
     gap: 0;
     min-height: unset;
-  }
-
-  .hero {
-    min-height: 65vh;
-    height: 65vh;
   }
 
 

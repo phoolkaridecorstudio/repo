@@ -6,41 +6,49 @@ import styles from './Testimonials.module.css';
 const testimonials = [
   {
     id: 1, name: 'Priya & Arjun Malhotra', event: 'Wedding Reception, Radisson Blu',
+    tag: 'Royal Wedding',
     text: 'Phoolkari Decor Studio turned our wedding into a fairytale. Every single guest commented on how breathtaking the décor was. The team went above and beyond — the mandap was pure art. We couldn\'t have asked for anything better.',
     initials: 'PM',
   },
   {
     id: 2, name: 'Ravneet Kaur', event: 'Daughter\'s 1st Birthday, Green Valley',
+    tag: 'Themed Birthday',
     text: 'I wanted a unicorn-garden theme and they absolutely nailed it! The attention to detail was incredible — from the entrance arch to the cake table. Every corner was Instagram-worthy. Highly recommend for any event!',
     initials: 'RK',
   },
   {
     id: 3, name: 'Vikram Singh Chadha', event: 'Corporate Awards Night, ITC Grand',
+    tag: 'Corporate Gala',
     text: 'Professional, creative, and flawless execution. Our annual gala looked world-class. The stage design and lighting were at an international standard. Phoolkari Decor truly understands luxury.',
     initials: 'VC',
   },
   {
     id: 4, name: 'Simran & Gurpreet', event: 'Engagement Ceremony, Heritage Haveli',
+    tag: 'Sacred Engagement',
     text: 'From our very first meeting, we knew we were in great hands. They listened to every detail we wanted and delivered something even more beautiful than we imagined. Our families are still talking about it!',
     initials: 'SG',
   },
   {
     id: 5, name: 'Neha & Sameer', event: 'Sangeet Ceremony, Taj Swarna',
+    tag: 'Sangeet Night',
     text: 'The floral arrangements were absolutely magical! They understood our vision of a vibrant, traditional yet modern Sangeet perfectly. The execution was flawless, and the entire venue felt alive with colors.',
     initials: 'NS',
   },
   {
     id: 6, name: 'Rohan Sethi', event: '50th Anniversary Gala, The Ritz',
+    tag: 'Golden Anniversary',
     text: 'For my parents\' golden anniversary, we wanted pure elegance. Phoolkari Decor Studio delivered exactly that. The grand chandelier installations and table centerpieces were simply majestic. A truly professional team.',
     initials: 'RS',
   },
   {
     id: 7, name: 'Ananya Verma', event: 'Baby Shower, Private Farmhouse',
+    tag: 'Pastel Baby Shower',
     text: 'I cannot express how beautiful my baby shower looked. They created a gorgeous pastel theme with custom props and soft lighting that made the evening so intimate and special. I am beyond thankful!',
     initials: 'AV',
   },
   {
     id: 8, name: 'Deepak & Sonam', event: 'Destination Wedding, Jaipur',
+    tag: 'Destination Wedding',
     text: 'We trusted Phoolkari Decor Studio for our destination wedding, and it was the best decision we made. Despite the logistical challenges, they transformed the palace into a breathtaking set. Highly recommend their services!',
     initials: 'DS',
   },
@@ -49,6 +57,9 @@ const testimonials = [
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef(null);
+
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' });
 
@@ -63,9 +74,26 @@ export default function Testimonials() {
   }, []);
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [next, isPaused]);
+
+  const handleTouchStart = (e) => {
+    setIsPaused(true);
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    setIsPaused(false);
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) next();
+      else prev();
+    }
+    touchStartX.current = null;
+  };
 
   const t = testimonials[current];
 
@@ -90,9 +118,20 @@ export default function Testimonials() {
           <div className="gold-divider"><span className="line" /><span className="dot" /><span className="line" /></div>
         </motion.div>
 
-        <div className={styles.spotlight}>
+        <div
+          className={styles.spotlight}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className={styles.ratingBadge}>
+            <span className={styles.verifiedIcon}>✓</span>
+            <span>5.0 Star Verified Review</span>
+            <span className={styles.stars}>★★★★★</span>
+          </div>
+
           <div className={styles.quoteIcon}>&ldquo;</div>
-          <div className={styles.stars}>★★★★★</div>
 
           <div className={styles.textWrap}>
             <AnimatePresence mode="wait" custom={direction}>
@@ -121,9 +160,12 @@ export default function Testimonials() {
               transition={{ duration: 0.3, delay: 0.2 }}
             >
               <div className={styles.avatar}>{t.initials}</div>
-              <div>
+              <div className={styles.authorMeta}>
                 <span className={styles.authorName}>{t.name}</span>
-                <span className={styles.authorEvent}>{t.event}</span>
+                <div className={styles.eventRow}>
+                  <span className={styles.authorEvent}>{t.event}</span>
+                  {t.tag && <span className={styles.categoryPill}>{t.tag}</span>}
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>

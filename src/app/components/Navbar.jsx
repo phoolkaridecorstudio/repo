@@ -6,8 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Ripple from './Ripple';
-
-
+import { trackEvent } from '../utils/analytics';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -116,7 +115,14 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <Link href="/#contact" className={`btn btn--gold ${styles.cta}`} onClick={(e) => handleLinkClick(e, '/#contact')}>
+          <Link
+            href="/#contact"
+            className={`btn btn--gold ${styles.cta}`}
+            onClick={(e) => {
+              trackEvent('click_consultation_cta', { event_category: 'Navigation', event_label: 'navbar_desktop' });
+              handleLinkClick(e, '/#contact');
+            }}
+          >
             Book Consultation
             <Ripple />
           </Link>
@@ -164,7 +170,15 @@ export default function Navbar() {
                   </motion.a>
                 ))}
               </nav>
-              <Link href="/#contact" className="btn btn--gold" onClick={(e) => handleLinkClick(e, '/#contact')} style={{ width: '100%', marginTop: '2rem' }}>
+              <Link
+                href="/#contact"
+                className="btn btn--gold"
+                onClick={(e) => {
+                  trackEvent('click_consultation_cta', { event_category: 'Navigation', event_label: 'navbar_mobile' });
+                  handleLinkClick(e, '/#contact');
+                }}
+                style={{ width: '100%', marginTop: '2rem' }}
+              >
                 Book Consultation
                 <Ripple />
               </Link>

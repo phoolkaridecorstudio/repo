@@ -112,6 +112,25 @@
 
 .detail a:hover { color: var(--gold); }
 
+.mapLink {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem !important;
+  color: var(--gold-dark) !important;
+  font-family: var(--font-heading);
+  font-weight: 600 !important;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.mapLink:hover {
+  color: var(--gold) !important;
+  transform: translateX(3px);
+}
+
 /* Social — horizontal strip */
 .social {
   display: flex;

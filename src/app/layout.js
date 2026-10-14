@@ -62,19 +62,31 @@ export const metadata = {
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'EventPlanner'],
   name: 'Phoolkari Decor Studio',
   url: 'https://www.phoolkaridecorstudio.in',
   description:
-    'Luxury event decoration services for weddings, birthdays, corporate events & more at top hotels, resorts & farmhouses in Amritsar, Punjab.',
+    'Luxury event planning and bespoke decoration services for weddings, corporate galas, and celebrations in Amritsar and across Punjab. Specializing in royal mandaps, exotic floral artistry, and luxury venue transformations.',
   image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
   telephone: ['+91-91557-03155', '+91-96990-33155'],
   email: 'info@phoolkaridecorstudio.in',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Mall Road & Circular Road Area',
     addressLocality: 'Amritsar',
     addressRegion: 'Punjab',
+    postalCode: '143001',
     addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 31.6340,
+    longitude: 74.8723,
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Mukesh N Aggarwal',
+    jobTitle: 'Creative Director & Founder',
   },
   priceRange: '$$$$',
   openingHours: 'Mo-Su 09:00-21:00',
@@ -86,12 +98,59 @@ const structuredData = {
     {
       '@type': 'State',
       name: 'Punjab',
-    }
+    },
+    {
+      '@type': 'City',
+      name: 'Jalandhar',
+    },
+    {
+      '@type': 'City',
+      name: 'Ludhiana',
+    },
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Luxury Event & Wedding Decoration Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Luxury Wedding Decor & Royal Mandaps',
+          url: 'https://www.phoolkaridecorstudio.in/services/wedding-decor',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Corporate Event Management & Galas',
+          url: 'https://www.phoolkaridecorstudio.in/services/corporate-events',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Luxury Birthday & Anniversary Decoration',
+          url: 'https://www.phoolkaridecorstudio.in/services/birthday-parties',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Festival & Cultural Celebration Decor',
+          url: 'https://www.phoolkaridecorstudio.in/services/festival-decor',
+        },
+      },
+    ],
+  },
   sameAs: [
     'https://www.instagram.com/phoolkaridecorstudio/',
-    'https://www.facebook.com/phoolkaridecorstudio/'
-  ]
+    'https://www.facebook.com/phoolkaridecorstudio/',
+    'https://in.pinterest.com/phoolkaridecorstudio/',
+  ],
 };
 
 import SmoothScroll from './components/SmoothScroll';

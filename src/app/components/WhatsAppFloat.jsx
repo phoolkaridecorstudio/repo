@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from './WhatsAppFloat.module.css';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 export default function WhatsAppFloat() {
   const [visible, setVisible] = useState(false);
@@ -19,6 +20,7 @@ export default function WhatsAppFloat() {
       rel="noopener noreferrer"
       className={styles.float}
       aria-label="Chat on WhatsApp"
+      onClick={() => trackWhatsAppClick('floating_widget')}
     >
       <span className={styles.pulse} />
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">

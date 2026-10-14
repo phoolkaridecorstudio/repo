@@ -5,18 +5,18 @@ export const portfolioEvents = [
   { id: 4, title: 'Ring Ceremony', venue: 'Hyatt Amritsar', category: 'celebration', image: '/images/portfolio/event-4.webp', alt: 'Elegant ring ceremony stage decoration at Hyatt Amritsar' },
   { id: 5, title: 'Grand Gateway', venue: 'Marriott Resort', category: 'wedding', image: '/images/portfolio/event-5.webp', alt: 'Grand floral gateway entrance decoration for a luxury wedding at Marriott Resort' },
   { id: 6, title: 'Awards Gala', venue: 'ITC Grand', category: 'corporate', image: '/images/services/corporate-events.webp', alt: 'Professional corporate awards gala stage setup at ITC Grand' },
-  { id: 7, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 1.webp', alt: 'Haldi decoration setup 1' },
-  { id: 8, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 2.webp', alt: 'Haldi decoration setup 2' },
-  { id: 9, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 3.webp', alt: 'Haldi decoration setup 3' },
-  { id: 10, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 4.webp', alt: 'Haldi decoration setup 4' },
-  { id: 11, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 5.webp', alt: 'Haldi decoration setup 5' },
-  { id: 12, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 6.webp', alt: 'Haldi decoration setup 6' },
-  { id: 13, title: 'Haldi Ceremony', venue: 'Phoolkari Special', category: 'haldi', image: '/images/portfolio/haldi/Haldi 7.webp', alt: 'Haldi decoration setup 7' },
-  { id: 14, title: 'Mehendi Evening', venue: 'Phoolkari Special', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 1.webp', alt: 'Mehendi decoration setup 1' },
-  { id: 15, title: 'Mehendi Evening', venue: 'Phoolkari Special', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 2.webp', alt: 'Mehendi decoration setup 2' },
-  { id: 16, title: 'Mehendi Evening', venue: 'Phoolkari Special', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 3.webp', alt: 'Mehendi decoration setup 3' },
-  { id: 17, title: 'Mehendi Evening', venue: 'Phoolkari Special', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 4.webp', alt: 'Mehendi decoration setup 4' },
-  { id: 18, title: 'Mehendi Evening', venue: 'Phoolkari Special', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 5.webp', alt: 'Mehendi decoration setup 5' }
+  { id: 7, title: 'Marigold Canopy Haldi', venue: 'Radisson Blu Lawn, Amritsar', category: 'haldi', image: '/images/portfolio/haldi/Haldi 1.webp', alt: 'Vibrant yellow marigold backdrop and floral canopy setup for Haldi ceremony in Amritsar' },
+  { id: 8, title: 'Traditional Brass Uruli Haldi', venue: 'Heritage Haveli, Amritsar', category: 'haldi', image: '/images/portfolio/haldi/Haldi 2.webp', alt: 'Traditional Punjabi Haldi stage featuring handcrafted brass uruli and genda phool floral cascades' },
+  { id: 9, title: 'Floral Jhoola Setup', venue: 'Green Valley Farmhouse', category: 'haldi', image: '/images/portfolio/haldi/Haldi 3.webp', alt: 'Bespoke floral jhoola swing with sunflower and marigold drapes for Haldi photoshoot in Punjab' },
+  { id: 10, title: 'Royal Haldi Drapes & Rangoli', venue: 'Private Farmhouse, Amritsar', category: 'haldi', image: '/images/portfolio/haldi/Haldi 4.webp', alt: 'Royal yellow and orange drapes with floral rangoli and tassel accents for outdoor Haldi lawn' },
+  { id: 11, title: 'Sunburst Haldi Seating', venue: 'Hyatt Regency Amritsar', category: 'haldi', image: '/images/portfolio/haldi/Haldi 5.webp', alt: 'Luxury pre-wedding Haldi seating lounge with earthen pots and fresh botanical arrangements' },
+  { id: 12, title: 'Pastel Floral Haldi Canopy', venue: 'Welcomhotel Amritsar', category: 'haldi', image: '/images/portfolio/haldi/Haldi 6.webp', alt: 'Pastel yellow Haldi canopy with fairy lights and artisanal fabric umbrellas' },
+  { id: 13, title: 'Botanical Haldi Courtyard', venue: 'Heritage Estate, Amritsar', category: 'haldi', image: '/images/portfolio/haldi/Haldi 7.webp', alt: 'Intimate farmhouse Haldi ceremony setup with fresh botanical accents and brass lanterns' },
+  { id: 14, title: 'Boho Chic Mehendi Lounge', venue: 'Taj Swarna, Amritsar', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 1.webp', alt: 'Bohemian Mehendi lounge setup with colorful cushions, Phulkari fabric drapes and fairy lighting' },
+  { id: 15, title: 'Enchanted Twilight Mehendi', venue: 'Radisson Blu Ballroom', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 2.webp', alt: 'Enchanted evening Mehendi backdrop with hanging brass lamps, pastel floristry and fairy light wall' },
+  { id: 16, title: 'Cultural Henna & Tuberose Stage', venue: 'Heritage Haveli', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 3.webp', alt: 'Traditional Henna lounge with floral photo-booth arch and handcrafted Punjabi handicraft props' },
+  { id: 17, title: 'Neon Sangeet & Mehendi Night', venue: 'ITC Grand Amritsar', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 4.webp', alt: 'Glamorous cocktail and Mehendi night setup with modern neon signage and exotic floral arches' },
+  { id: 18, title: 'Royal Embroidered Cabana', venue: 'Green Valley Farmhouse', category: 'mehendi', image: '/images/portfolio/mehendi/Mehendi 5.webp', alt: 'Royal Mehendi cabana setup with embroidered textiles and fragrant tuberose garlands in Punjab' }
 ];
 
 export const servicesData = [

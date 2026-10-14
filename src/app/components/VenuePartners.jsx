@@ -18,28 +18,36 @@ export default function VenuePartners() {
     <section className={styles.partnerSection}>
       <div className="container">
         <div className="section-header" style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <h2 className="section-title">Preferred <em>Partners</em></h2>
+          <span className="section-label">Trusted By Premier Properties</span>
+          <h2 className="section-title">Preferred <em>Venue Partners</em></h2>
+          <div className="gold-divider">
+            <span className="line" /><span className="dot" /><span className="line" />
+          </div>
+          <p className="section-desc" style={{ maxWidth: '640px', margin: '0 auto' }}>
+            From five-star ballrooms to tranquil forest retreats, our team has executed bespoke decor setups at Punjab&apos;s most prestigious properties.
+          </p>
         </div>
 
-        <div className={styles.partnerList}>
+        <div className={styles.partnerGrid}>
           {venueItems.map((item, idx) => (
             <motion.div
               key={idx}
-              className={styles.partnerLogoBlock}
-              initial={{ opacity: 0, scale: 0.88 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false, amount: 0.6 }}
-              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className={styles.partnerCard}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
             >
               <div className={styles.partnerLogoWrap}>
                 <Image
                   src={item.src}
-                  alt={item.name}
+                  alt={`${item.name} Amritsar partner logo`}
                   fill
                   style={{ objectFit: 'contain' }}
-                  sizes="(max-width: 768px) 90vw, 600px"
+                  sizes="(max-width: 768px) 50vw, 260px"
                 />
               </div>
+              <h3 className={styles.partnerName}>{item.name}</h3>
             </motion.div>
           ))}
         </div>

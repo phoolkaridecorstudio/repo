@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styles from './FounderNote.module.css';
 
-export default function FounderNote() {
+export default function FounderNote({ asH1 = true }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -30,9 +30,15 @@ export default function FounderNote() {
           <span className="section-label" style={{ marginBottom: '16px', display: 'inline-block' }}>
             Luxury Wedding Decorators &amp; Event Planners in Amritsar
           </span>
-          <h1 className={styles.quote}>
-            Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
-          </h1>
+          {asH1 ? (
+            <h1 className={styles.quote}>
+              Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
+            </h1>
+          ) : (
+            <h2 className={styles.quote}>
+              Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
+            </h2>
+          )}
         </motion.div>
 
         {/* Divider */}

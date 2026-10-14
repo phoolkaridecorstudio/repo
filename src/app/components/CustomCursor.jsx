@@ -6,6 +6,8 @@ export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [hasMoved, setHasMoved] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Check if device is touch-capable
@@ -22,7 +24,12 @@ export default function CustomCursor() {
   useEffect(() => {
     const updateMousePosition = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
+      setHasMoved(true);
+      setIsVisible(true);
     };
+
+    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseEnter = () => setIsVisible(true);
 
     const handleMouseOver = (e) => {
       if (
@@ -40,10 +47,14 @@ export default function CustomCursor() {
 
     window.addEventListener('mousemove', updateMousePosition);
     window.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mouseenter', handleMouseEnter);
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('mouseenter', handleMouseEnter);
     };
   }, []);
 
@@ -61,11 +72,17 @@ export default function CustomCursor() {
         justifyContent: 'center',
         alignItems: 'center'
       }}
+      initial={{ opacity: 0 }}
       animate={{
         x: mousePosition.x - (isHovering ? 25 : 12),
         y: mousePosition.y - (isHovering ? 25 : 12),
+        opacity: hasMoved && isVisible ? 1 : 0,
       }}
-      transition={{ type: 'tween', ease: 'backOut', duration: 0.1 }}
+      transition={{
+        opacity: { duration: 0.2 },
+        x: { type: 'tween', ease: 'backOut', duration: 0.1 },
+        y: { type: 'tween', ease: 'backOut', duration: 0.1 },
+      }}
     >
       <motion.div
         animate={{

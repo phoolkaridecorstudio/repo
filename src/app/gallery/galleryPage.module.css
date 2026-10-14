@@ -115,21 +115,80 @@
 
 .lightboxClose {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-size: 1.5rem;
   cursor: pointer;
   z-index: 1001;
-  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+
+.lightboxNavBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 1001;
+}
+
+.lightboxNavBtn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightboxPrev {
+  left: 24px;
+}
+
+.lightboxNext {
+  right: 24px;
+}
+
+.lightboxCaption {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 10, 5, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 151, 62, 0.3);
+  border-radius: 30px;
+  padding: 8px 24px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1001;
 }
 
 .lightboxImageWrap {
@@ -137,6 +196,29 @@
   width: 100%;
   max-width: 1200px;
   height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .lightboxNavBtn {
+    width: 40px;
+    height: 40px;
+  }
+  .lightboxPrev { left: 12px; }
+  .lightboxNext { right: 12px; }
+  .lightboxClose {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+  .lightboxCaption {
+    font-size: 0.75rem;
+    padding: 6px 16px;
+    bottom: 14px;
+    max-width: 90vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 @media (max-width: 768px) {

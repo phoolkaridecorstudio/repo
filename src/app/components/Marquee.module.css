@@ -142,56 +142,124 @@
 }
 
 /* Vertical Scroll-Triggered Partner Logos */
+/* Luxury Partner Showcase Grid */
 .partnerSection {
-  padding: 70px 0 100px 0;
+  padding: 80px 0 100px 0;
   background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 50%, var(--ivory) 100%);
   border-top: 1px solid rgba(197, 151, 62, 0.12);
   border-bottom: 1px solid rgba(197, 151, 62, 0.12);
 }
 
-.partnerList {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  max-width: 620px;
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.partnerLogoBlock {
+.partnerCard {
+  background: #fff;
+  border: 1px solid var(--champagne);
+  border-radius: 16px;
+  padding: 28px 20px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  box-shadow: 0 4px 16px rgba(26, 16, 8, 0.03);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.partnerCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(197, 151, 62, 0.14);
+}
+
+.partnerCard:hover::before {
+  opacity: 1;
 }
 
 .partnerLogoWrap {
   position: relative;
   width: 100%;
-  max-width: 560px;
-  height: 200px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.partnerName {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.partnerCard:hover .partnerName {
+  color: var(--gold-dark);
+}
+
+@media (max-width: 1024px) {
+  .partnerGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .partnerSection {
-    padding: 50px 0 70px 0;
+    padding: 60px 0 70px 0;
   }
 
-  .partnerList {
-    gap: 60px;
+  .partnerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .partnerCard {
+    padding: 20px 14px 16px;
   }
 
   .partnerLogoWrap {
-    height: 200px;
+    height: 75px;
   }
 }
 
 @media (max-width: 480px) {
-  .partnerList {
-    gap: 50px;
+  .partnerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .partnerLogoWrap {
-    height: 180px;
+    height: 65px;
+  }
+
+  .partnerName {
+    font-size: 0.7rem;
   }
 }
+
 

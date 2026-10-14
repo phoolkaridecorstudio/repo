@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import styles from './Themes.module.css';
@@ -82,6 +83,12 @@ const MobileCardStack = ({ themes, headerInView }) => {
             );
           })}
         </AnimatePresence>
+      </div>
+
+      <div style={{ textAlign: 'center', marginTop: '36px' }}>
+        <Link href="/themes" className="btn btn--gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+          Explore All Signature Themes &rarr;
+        </Link>
       </div>
     </div>
   );
@@ -170,6 +177,17 @@ export default function Themes() {
                 </motion.div>
               ))}
             </div>
+
+            <motion.div
+              style={{ marginTop: '36px', textAlign: 'left' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={headerInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <Link href="/themes" className="btn btn--gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                Explore All Signature Themes &rarr;
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>

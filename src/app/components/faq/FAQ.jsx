@@ -22,7 +22,15 @@ const faqs = [
   },
   {
     question: "What is your starting price for wedding decor in Punjab?",
-    answer: "Our luxury wedding decor services are fully customized based on venue size, floral choices, and structural requirements. Please contact us for a detailed, personalized quote tailored to your specific event budget."
+    answer: "Our luxury wedding decor services are fully customized based on venue size, floral choices, and structural requirements. Mandap and stage setups typically range from ₹1.5 Lakhs to ₹6 Lakhs, with grand 5-star ballroom and German hanger productions customized from ₹5 Lakhs onwards."
+  },
+  {
+    question: "Which luxury hotels and venues in Amritsar do you decorate?",
+    answer: "We have extensive on-site experience decorating premier venues in Amritsar, including Radisson Blu Hotel (Grand Ballroom), Taj Swarna (Trinity Hall), Hyatt Regency, Welcomhotel by ITC, and exclusive private farmhouses along Airport Road and GT Road Bypass."
+  },
+  {
+    question: "What does your Haldi and Mehndi decoration service include?",
+    answer: "Our Haldi and Mehndi setups feature fresh marigold (genda phool) cascades, brass urulis with floating lotuses, traditional Punjabi phulkari canopies, floral jhulas (swings), and dedicated flower shower zones."
   }
 ];
 

@@ -45,6 +45,16 @@ const serviceSchema = {
   url: 'https://www.phoolkaridecorstudio.in/services/birthday-parties',
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.phoolkaridecorstudio.in' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.phoolkaridecorstudio.in/services' },
+    { '@type': 'ListItem', position: 3, name: 'Birthday & Anniversary Decor', item: 'https://www.phoolkaridecorstudio.in/services/birthday-parties' },
+  ],
+};
+
 export default function BirthdayParties() {
   return (
     <>
@@ -52,12 +62,23 @@ export default function BirthdayParties() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className={styles.servicePage}>
         <div className={styles.heroWrap}>
-          <Image src="/images/services/birthday-decor.webp" alt="Birthday and Anniversary Decoration by Phoolkari Decor Studio" fill style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/services/birthday-decor.webp" alt="Birthday and Anniversary Decoration by Phoolkari Decor Studio" fill sizes="100vw" style={{ objectFit: 'cover' }} priority />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
+            <nav aria-label="Breadcrumb" className={styles.breadcrumbs}>
+              <Link href="/">Home</Link>
+              <span className={styles.bcSep}>/</span>
+              <Link href="/services">Services</Link>
+              <span className={styles.bcSep}>/</span>
+              <span className={styles.bcCurrent}>Birthday & Anniversary</span>
+            </nav>
             <span className="section-label">Our Services</span>
             <h1 className="section-title" style={{ color: 'var(--white)' }}>Birthday & <em>Anniversary</em></h1>
             <div className="gold-divider"><span className="line" /><span className="dot" /><span className="line" /></div>

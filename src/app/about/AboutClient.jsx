@@ -71,7 +71,7 @@ export default function AboutClient() {
         </section>
 
         {/* Existing Founder Note component */}
-        <FounderNote />
+        <FounderNote asH1={false} />
 
         {/* New Core Values Section */}
         <section className={styles.valuesSection}>
