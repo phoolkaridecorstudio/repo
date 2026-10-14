@@ -4,10 +4,10 @@ import { motion, useInView } from 'framer-motion';
 import styles from './Process.module.css';
 
 const steps = [
-  { number: '01', title: 'Consultation', desc: 'We begin with a detailed one-on-one discussion to understand your vision, preferences, budget, and the unique story you want your event to tell.' },
-  { number: '02', title: 'Design & Concept', desc: 'Our creative team crafts a bespoke design concept with mood boards, 3D renders, and material samples — so you can see the magic before it happens.' },
-  { number: '03', title: 'Execution', desc: 'Our skilled artisans and installation team bring the design to life with precision, transforming your venue into a breathtaking experience.' },
-  { number: '04', title: 'Celebration', desc: 'You walk in to a picture-perfect setting. Every flower, drape, and light exactly where it should be. All that\'s left is to celebrate.' },
+  { number: '01', title: 'Chat & Consultation', desc: 'We talk on call or WhatsApp to understand your event date, venue, budget, and the look you want.' },
+  { number: '02', title: 'Design & Pricing Plan', desc: 'We share photo samples, decoration ideas, and clear pricing so you know exactly what to expect.' },
+  { number: '03', title: 'Setup & Decoration', desc: 'Our team arrives early and carefully arranges all flowers, lighting, stage props, and seating.' },
+  { number: '04', title: 'Enjoy Your Celebration', desc: 'You arrive at a ready, picture-perfect venue on time. You and your family can simply relax and celebrate!' },
 ];
 
 export default function Process() {
@@ -24,10 +24,10 @@ export default function Process() {
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="section-label">How We Work</span>
-          <h2 className="section-title">Our <em>Process</em></h2>
+          <span className="section-label">How It Works</span>
+          <h2 className="section-title">Simple 4-Step <em>Process</em></h2>
           <div className="gold-divider"><span className="line" /><span className="dot" /><span className="line" /></div>
-          <p className="section-desc">Four seamless steps from your first call to a flawless celebration</p>
+          <p className="section-desc">From your first phone call to the wedding day, we make everything smooth and stress-free</p>
         </motion.div>
 
         <div className={styles.timeline}>

@@ -30,9 +30,9 @@ const MobileCardStack = ({ themes, headerInView }) => {
         initial={{ opacity: 0, y: 40 }}
         animate={headerInView ? { opacity: 1, y: 0 } : {}}
       >
-        <span className="section-label" style={{ color: 'var(--gold-light)' }}>Trending Now</span>
+        <span className="section-label" style={{ color: 'var(--gold-light)' }}>Trending Ideas</span>
         <h2 className="section-title" style={{ color: '#fff', display: 'flex', gap: '0.3em', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <BlurText text="Signature" delay={0.2} />
+          <BlurText text="Popular" delay={0.2} />
           <em style={{ color: 'var(--gold)' }}><BlurText text="Themes" delay={0.6} /></em>
         </h2>
         <div className="gold-divider">
@@ -87,7 +87,7 @@ const MobileCardStack = ({ themes, headerInView }) => {
 
       <div style={{ textAlign: 'center', marginTop: '36px' }}>
         <Link href="/themes" className="btn btn--gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-          Explore All Signature Themes &rarr;
+          View All Event Themes &rarr;
         </Link>
       </div>
     </div>
@@ -146,9 +146,9 @@ export default function Themes() {
               initial={{ opacity: 0, y: 40 }}
               animate={headerInView ? { opacity: 1, y: 0 } : {}}
             >
-              <span className="section-label" style={{ color: 'var(--gold-light)' }}>Trending Now</span>
+              <span className="section-label" style={{ color: 'var(--gold-light)' }}>Trending Ideas</span>
               <h2 className="section-title" style={{ color: '#fff', display: 'flex', gap: '0.3em', flexWrap: 'wrap' }}>
-                <BlurText text="Signature" delay={0.2} />
+                <BlurText text="Popular" delay={0.2} />
                 <em style={{ color: 'var(--gold)' }}><BlurText text="Themes" delay={0.6} /></em>
               </h2>
               <div className="gold-divider" style={{ justifyContent: 'flex-start' }}>
@@ -185,7 +185,7 @@ export default function Themes() {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               <Link href="/themes" className="btn btn--gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                Explore All Signature Themes &rarr;
+                View All Event Themes &rarr;
               </Link>
             </motion.div>
           </div>

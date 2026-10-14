@@ -12,16 +12,18 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL('https://www.phoolkaridecorstudio.in'),
-  title: 'Phoolkari Decor Studio — Luxury Event Planners & Decoration Services in Amritsar',
+  title: 'Wedding Decorators in Amritsar — Phoolkari Decor Studio | Luxury Event & Wedding Decor',
   description:
-    'Premium luxury event planners and decoration services for weddings, birthdays, corporate events & celebrations at top hotels, resorts & farmhouses in Amritsar, Punjab. Transform your occasion into a masterpiece.',
+    'Top luxury wedding decorators and event planners in Amritsar, Punjab. Royal mandap decoration, wedding stage decor, Haldi/Mehndi setups & floral artistry at top resorts & farmhouses. Call +91 91557-03155.',
   keywords: [
     'Wedding Decorators in Amritsar',
+    'Wedding Decor Amritsar',
     'Luxury Wedding Decor Amritsar',
     'Event Planners Amritsar',
     'Wedding Stage Decoration Punjab',
     'Mandap Decoration Amritsar',
     'Haldi and Mehndi Decor Amritsar',
+    'Best Wedding Planners in Amritsar',
     'Corporate Event Management Amritsar',
     'Phoolkari Decor Studio'
   ],
@@ -30,9 +32,9 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Phoolkari Decor Studio — Luxury Event Decoration',
+    title: 'Wedding Decorators in Amritsar — Phoolkari Decor Studio',
     description:
-      'Where Every Occasion Becomes a Masterpiece. Premium decor services for weddings, celebrations & corporate events in Amritsar.',
+      'Premier luxury wedding decorators & event planners in Amritsar, Punjab. Royal mandap decoration, grand wedding stages & floral themes.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://www.phoolkaridecorstudio.in',
@@ -40,9 +42,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Phoolkari Decor Studio — Luxury Event Decoration',
+    title: 'Wedding Decorators in Amritsar — Phoolkari Decor Studio',
     description:
-      'Where Every Occasion Becomes a Masterpiece. Premium decor services in Amritsar, Punjab.',
+      'Premier luxury wedding decorators & event planners in Amritsar, Punjab. Royal mandaps, wedding stages & floral decor.',
   },
   robots: {
     index: true,
@@ -64,24 +66,26 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'EventPlanner'],
   name: 'Phoolkari Decor Studio',
+  alternateName: 'Phoolkari Decor Studio - Luxury Wedding Planner in Amritsar | Wedding Decorator | Destination Wedding Planner',
   url: 'https://www.phoolkaridecorstudio.in',
   description:
-    'Luxury event planning and bespoke decoration services for weddings, corporate galas, and celebrations in Amritsar and across Punjab. Specializing in royal mandaps, exotic floral artistry, and luxury venue transformations.',
+    'Luxury event planning and bespoke wedding decoration services in Amritsar and across Punjab. Specializing in royal mandaps, exotic floral artistry, wedding stages, and luxury venue transformations at top hotels, resorts, and farmhouses.',
   image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
   telephone: ['+91-91557-03155', '+91-96990-33155'],
   email: 'info@phoolkaridecorstudio.in',
+  hasMap: 'https://share.google/h12ps5eynG7lKzTKg',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Mall Road & Circular Road Area',
+    streetAddress: 'Ashiana Estate, 1034, Fateh Garh Churian Rd, Murad Pura, Naushehra',
     addressLocality: 'Amritsar',
     addressRegion: 'Punjab',
-    postalCode: '143001',
+    postalCode: '143008',
     addressCountry: 'IN',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 31.6340,
-    longitude: 74.8723,
+    latitude: 31.6770,
+    longitude: 74.8709,
   },
   founder: {
     '@type': 'Person',
@@ -147,6 +151,8 @@ const structuredData = {
     ],
   },
   sameAs: [
+    'https://share.google/h12ps5eynG7lKzTKg',
+    'https://www.google.com/search?kgmid=/g/11zc4qfjly',
     'https://www.instagram.com/phoolkaridecorstudio/',
     'https://www.facebook.com/phoolkaridecorstudio/',
     'https://in.pinterest.com/phoolkaridecorstudio/',

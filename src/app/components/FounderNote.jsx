@@ -32,11 +32,11 @@ export default function FounderNote({ asH1 = true }) {
           </span>
           {asH1 ? (
             <h1 className={styles.quote}>
-              Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
+              Bringing Your Dream Wedding To <span style={{ color: 'var(--gold)' }}>Life</span>
             </h1>
           ) : (
             <h2 className={styles.quote}>
-              Where Every Detail Is A <span style={{ color: 'var(--gold)' }}>Masterpiece</span>
+              Bringing Your Dream Wedding To <span style={{ color: 'var(--gold)' }}>Life</span>
             </h2>
           )}
         </motion.div>
@@ -60,7 +60,7 @@ export default function FounderNote({ asH1 = true }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Crafting unforgettable experiences at Amritsar&apos;s finest hotels, resorts &amp; farmhouses
+          Decorating Amritsar&apos;s most beautiful weddings at top 5-star hotels, resorts &amp; farmhouses.
         </motion.p>
 
         {/* Signature */}

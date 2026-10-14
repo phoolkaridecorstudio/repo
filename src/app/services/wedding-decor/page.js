@@ -6,8 +6,8 @@ import Link from 'next/link';
 import styles from '../servicesPage.module.css';
 
 export const metadata = {
-  title: 'Luxury Wedding Decorators in Amritsar | Phoolkari',
-  description: 'Top-rated luxury wedding decoration services in Punjab. We specialize in royal mandap designs, floral cascades, and premium stage setups at top hotels and farmhouses.',
+  title: 'Wedding Decorators in Amritsar — Luxury Wedding Decor | Phoolkari Decor Studio',
+  description: 'Top-rated luxury wedding decoration services in Amritsar, Punjab. Royal mandap designs, floral cascades, wedding stages & theme setups at premier venues & farmhouses.',
   alternates: { canonical: 'https://www.phoolkaridecorstudio.in/services/wedding-decor' }
 };
 
@@ -21,7 +21,7 @@ const features = [
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Luxury Wedding Decorators in Amritsar',
+  name: 'Wedding Decorators in Amritsar',
   serviceType: 'Wedding Decoration & Planning',
   provider: {
     '@type': 'LocalBusiness',
@@ -29,10 +29,13 @@ const serviceSchema = {
     url: 'https://www.phoolkaridecorstudio.in',
     image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
     telephone: ['+91-91557-03155', '+91-96990-33155'],
+    sameAs: 'https://share.google/h12ps5eynG7lKzTKg',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Ashiana Estate, 1034, Fateh Garh Churian Rd, Murad Pura, Naushehra',
       addressLocality: 'Amritsar',
       addressRegion: 'Punjab',
+      postalCode: '143008',
       addressCountry: 'IN',
     },
   },
@@ -87,7 +90,7 @@ export default function WeddingDecor() {
 
         <div className={styles.intro}>
           <p className={styles.introText}>
-            Your wedding day is a masterpiece waiting to be painted. From intimate ceremonies to grand destination weddings, we create breathtaking environments tailored perfectly to your love story. Whether it&apos;s a vibrant Haldi setup, a royal Mandap, or a glamorous reception hall, our expertise guarantees an unforgettable experience.
+            Your wedding day is one of the most special moments of your life. From intimate pre-wedding functions to grand celebrations, we create beautiful floral mandaps, stunning stage backdrops, and elegant lighting tailored to your family&apos;s traditions and budget.
           </p>
         </div>
 
@@ -101,11 +104,11 @@ export default function WeddingDecor() {
         </div>
 
         <div className={styles.ctaBanner}>
-          <h2 className={styles.ctaTitle}>Venues We <em>Transform</em></h2>
+          <h2 className={styles.ctaTitle}>Venues We <em>Decorate</em></h2>
           <p className={styles.ctaText}>
-            We have extensive experience working with Punjab&apos;s top luxury venues, including Radisson Blu, Taj Swarna, Hyatt Amritsar, and various premium private farmhouses. Whether it is an intimate garden wedding or a grand ballroom reception, we know how to optimize the space.
+            We regularly decorate weddings at Amritsar&apos;s top luxury hotels and farmhouses, including Radisson Blu, Taj Swarna, Hyatt Regency, and private farmhouse lawns. Wherever your venue is, we ensure everything looks picture-perfect and is completed on time.
           </p>
-          <Link href="#contact" className="btn btn--gold">Book Your Wedding Consultation</Link>
+          <Link href="#contact" className="btn btn--gold">Talk to Our Team</Link>
         </div>
       </main>
       <Contact />

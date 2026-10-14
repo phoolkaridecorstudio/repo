@@ -29,10 +29,13 @@ const serviceSchema = {
     url: 'https://www.phoolkaridecorstudio.in',
     image: 'https://www.phoolkaridecorstudio.in/images/logo.png',
     telephone: ['+91-91557-03155', '+91-96990-33155'],
+    sameAs: 'https://share.google/h12ps5eynG7lKzTKg',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Ashiana Estate, 1034, Fateh Garh Churian Rd, Murad Pura, Naushehra',
       addressLocality: 'Amritsar',
       addressRegion: 'Punjab',
+      postalCode: '143008',
       addressCountry: 'IN',
     },
   },

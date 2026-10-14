@@ -10,18 +10,18 @@ import styles from './aboutPage.module.css';
 const coreValues = [
   {
     icon: '✨',
-    title: 'Bespoke Artistry',
-    desc: 'We don\'t do cookie-cutter. Every setup is a blank canvas, completely custom-designed to reflect your personality and style.'
+    title: 'Customized For You',
+    desc: 'No two weddings are the same. We design your stage, mandap, and flowers according to your personal taste, colors, and budget.'
   },
   {
     icon: '🌿',
-    title: 'Premium Quality',
-    desc: 'From fresh imported florals to hand-crafted props, we source only the absolute highest quality materials for your events.'
+    title: 'Fresh Flowers & Quality Props',
+    desc: 'We use fresh, fragrant flowers, neat fabric drapes, and premium lighting so your venue looks stunning in person and in photos.'
   },
   {
     icon: '🤝',
-    title: 'Flawless Execution',
-    desc: 'Our dedicated team of artisans and planners work tirelessly behind the scenes so you can simply arrive and enjoy your celebration.'
+    title: 'On-Time, Stress-Free Setup',
+    desc: 'Our experienced team completes all setup work well before guests arrive, so you and your family never have to worry.'
   }
 ];
 
@@ -49,7 +49,7 @@ export default function AboutClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              The Studio
+              About Phoolkari
             </motion.span>
             <motion.h1 
               className={styles.heroTitle}
@@ -77,8 +77,8 @@ export default function AboutClient() {
         <section className={styles.valuesSection}>
           <div className="container">
             <div className={styles.valuesHeader}>
-              <span className="section-label">Our Philosophy</span>
-              <h2 className="section-title">The Phoolkari <em>Difference</em></h2>
+              <span className="section-label">Why Choose Us</span>
+              <h2 className="section-title">Why Families <em>Trust Us</em></h2>
               <div className="gold-divider">
                 <span className="line" /><span className="dot" /><span className="line" />
               </div>

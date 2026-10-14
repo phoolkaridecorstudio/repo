@@ -14,13 +14,13 @@ export default function ServicesClient() {
       <main className={styles.servicesPage}>
         <div className="container">
           <div className={styles.header}>
-            <span className="section-label">What We Offer</span>
-            <h1 className="section-title" style={{ color: 'var(--black)' }}>Our <em>Expertise</em></h1>
+            <span className="section-label">What We Do</span>
+            <h1 className="section-title" style={{ color: 'var(--black)' }}>Our Decoration <em>Services</em></h1>
             <div className="gold-divider">
               <span className="line" /><span className="dot" /><span className="line" />
             </div>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              From concept to creation, we handle every detail to deliver a flawless experience tailored to your unique celebration.
+              From intimate home functions to grand destination weddings, we manage all decoration with love, care, and on-time delivery.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export default function ServicesClient() {
                   <h2 className={styles.title}>{service.title}</h2>
                   <p className={styles.desc}>{service.desc}</p>
                   <a href={`/services/${service.id}`} className={`btn btn--gold ${styles.btn}`}>
-                    Explore {service.title}
+                    View Details
                   </a>
                 </div>
               </motion.div>

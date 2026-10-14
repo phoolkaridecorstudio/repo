@@ -46,7 +46,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.7 }}
         >
-          Crafting majestic royal mandaps, bespoke floral installations &amp; grand celebrations across Punjab&apos;s finest venues.
+          Royal mandap designs, beautiful wedding stages, and fresh flower decoration for your special day across Amritsar and Punjab.
         </motion.p>
 
         <motion.div
@@ -56,10 +56,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           <Link href="/gallery" className="btn btn--outline-light">
-            Explore Portfolio
+            See Our Work
           </Link>
           <Link href="/#contact" className="btn btn--gold btn--glow">
-            Plan Your Event
+            Book Your Date
           </Link>
         </motion.div>
       </div>

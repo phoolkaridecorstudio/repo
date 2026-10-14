@@ -32,13 +32,13 @@ export default function ThemesClient() {
       <main className={styles.themesPage}>
         <div className="container">
           <div className={styles.header}>
-            <span className="section-label">Immersive Worlds</span>
-            <h1 className="section-title">Signature <em>Themes</em></h1>
+            <span className="section-label">Decoration Themes</span>
+            <h1 className="section-title">Popular Event <em>Themes</em></h1>
             <div className="gold-divider">
               <span className="line" /><span className="dot" /><span className="line" />
             </div>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              Explore our meticulously crafted design themes. Each concept is a fully immersive environment designed to transport you and your guests to another world.
+              Explore our most-loved decoration themes for weddings and parties. We customize every theme to fit your venue, colors, and budget.
             </p>
           </div>
 

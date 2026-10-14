@@ -22,34 +22,34 @@ export const portfolioEvents = [
 export const servicesData = [
   {
     id: 'wedding-decor',
-    title: 'Wedding Decor',
-    desc: 'Grand mandap designs, floral cascades, luxury stage setups, and complete wedding venue transformation that will leave your guests speechless.',
+    title: 'Wedding Decoration',
+    desc: 'Royal mandap decoration, beautiful stage backdrops, fresh flower arches, and complete venue styling for your dream wedding.',
     image: '/images/services/wedding-decor.webp',
   },
   {
     id: 'birthday-parties',
-    title: 'Birthday & Anniversary',
-    desc: 'Themed celebrations, balloon artistry, and custom installations designed to make every milestone truly memorable.',
+    title: 'Birthdays & Anniversaries',
+    desc: 'Fun birthday themes, balloon arches, photo booths, and custom stage setups to make every family celebration special.',
     image: '/images/services/birthday-decor.webp',
   },
   {
     id: 'corporate-events',
-    title: 'Corporate Events',
-    desc: 'Elegant conference setups, product launches, galas & award ceremonies that reflect your brand\'s prestige and sophistication.',
+    title: 'Corporate Events & Galas',
+    desc: 'Professional stage, lighting, sound, and entrance setups for business conferences, annual meetings, and award nights.',
     image: '/images/services/corporate-events.webp',
   },
   {
     id: 'festival-decor',
-    title: 'Festival & Cultural',
-    desc: 'Diwali, Lohri, Eid & cultural celebrations infused with authentic traditional artistry and contemporary luxury.',
+    title: 'Festivals & Traditional Functions',
+    desc: 'Festive decoration for Lohri, Diwali, Gurpurab, Eid, and family poojas with traditional Punjabi touches and fresh flowers.',
     image: '/images/services/festival-decor.webp',
   },
 ];
 
 export const themesData = [
-  { id: 'rajasthani', title: 'Royal Rajasthani', tag: 'Most Popular', desc: 'Regal palace aesthetics with jewel tones', image: '/images/themes/royal-rajasthani.webp' },
-  { id: 'garden', title: 'Enchanted Garden', tag: 'Romantic', desc: 'Whimsical floral arches & woodland magic', image: '/images/themes/enchanted-garden.webp' },
-  { id: 'celestial', title: 'Celestial Night', tag: 'Dramatic', desc: 'Deep navy skies & twinkling stars', image: '/images/themes/celestial-night.webp' },
-  { id: 'rustic', title: 'Rustic Vineyard', tag: 'Elegant', desc: 'Warm farmhouse charm with Edison lights', image: '/images/themes/rustic-vineyard.webp' },
-  { id: 'minimalist', title: 'Modern Minimalist', tag: 'Contemporary', desc: 'Clean lines & geometric structures', image: '/images/themes/modern-minimalist.webp' },
+  { id: 'rajasthani', title: 'Royal Rajasthani', tag: 'Most Popular', desc: 'Grand palace look with rich colors, brass lamps, and royal seating', image: '/images/themes/royal-rajasthani.webp' },
+  { id: 'garden', title: 'Enchanted Garden', tag: 'Romantic', desc: 'Open-air garden look with fresh pastel flowers and fairy lights', image: '/images/themes/enchanted-garden.webp' },
+  { id: 'celestial', title: 'Celestial Night', tag: 'Night Party', desc: 'Stunning night-sky look with glowing lights, chandeliers, and royal blue drapes', image: '/images/themes/celestial-night.webp' },
+  { id: 'rustic', title: 'Rustic Farmhouse', tag: 'Warm & Cozy', desc: 'Warm farmhouse charm with wooden tables, warm yellow lighting, and pampas grass', image: '/images/themes/rustic-vineyard.webp' },
+  { id: 'minimalist', title: 'Modern & Elegant', tag: 'Clean Look', desc: 'Clean, stylish, and modern decoration with neat floral arrangements', image: '/images/themes/modern-minimalist.webp' },
 ];

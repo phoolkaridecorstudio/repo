@@ -20,8 +20,8 @@ const CustomCursor = dynamic(() => import('./components/CustomCursor'));
 const VenuePartners = dynamic(() => import('./components/VenuePartners'));
 
 export const metadata = {
-  title: 'Phoolkari Decor Studio — Top Luxury Event Planners & Decorators in Amritsar',
-  description: 'Top-rated event planners and wedding decoration services in Amritsar, Punjab. Experience our majestic theme parties, premium floral mandaps, and bespoke corporate events.',
+  title: 'Wedding Decorators in Amritsar — Phoolkari Decor Studio | Best Event Planners',
+  description: 'Top-rated wedding decorators and luxury event planners in Amritsar, Punjab. Royal mandap decoration, wedding stage decor, Haldi/Mehndi setups & floral artistry at top resorts & farmhouses.',
   alternates: {
     canonical: 'https://www.phoolkaridecorstudio.in',
   },
@@ -33,10 +33,10 @@ const homeFaqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Who is the best event planner and decor company in Amritsar?',
+      name: 'Who is the best wedding decorator and event planner in Amritsar?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Phoolkari Decor Studio is widely recognized as the premier luxury event planner and best decor company in Amritsar. We specialize in transforming venues into breathtaking experiences for weddings, corporate events, and grand celebrations across Punjab.',
+        text: 'Phoolkari Decor Studio (located at Ashiana Estate, Fateh Garh Churian Rd, Amritsar) is recognized as one of the best luxury wedding decorators and event planners in Amritsar. We specialize in royal mandap decoration, grand wedding stages, vibrant Haldi/Mehndi setups, and venue styling at top luxury hotels like Taj Swarna, Radisson Blu, Hyatt Regency, and private farmhouses.',
       },
     },
     {

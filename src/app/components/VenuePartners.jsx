@@ -18,13 +18,13 @@ export default function VenuePartners() {
     <section className={styles.partnerSection}>
       <div className="container">
         <div className="section-header" style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <span className="section-label">Trusted By Premier Properties</span>
-          <h2 className="section-title">Preferred <em>Venue Partners</em></h2>
+          <span className="section-label">Where We Work</span>
+          <h2 className="section-title">Top Hotels &amp; <em>Resorts We Decorate</em></h2>
           <div className="gold-divider">
             <span className="line" /><span className="dot" /><span className="line" />
           </div>
           <p className="section-desc" style={{ maxWidth: '640px', margin: '0 auto' }}>
-            From five-star ballrooms to tranquil forest retreats, our team has executed bespoke decor setups at Punjab&apos;s most prestigious properties.
+            We regularly decorate weddings and parties at Amritsar&apos;s top 5-star hotels, luxury banquets, and private farmhouses.
           </p>
         </div>
 

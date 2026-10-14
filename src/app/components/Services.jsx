@@ -35,7 +35,7 @@ function ServiceCard({ service, index }) {
         <h3 className={styles.cardTitle}>{service.title}</h3>
         <p className={styles.cardDesc}>{service.desc}</p>
         <a href={`/services/${service.id}`} className={styles.cardLink}>
-          Explore Service
+          View Details
           <span className={styles.cardLinkArrow}>→</span>
         </a>
       </div>
@@ -59,15 +59,15 @@ export default function Services() {
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <span className="section-label">What We Offer</span>
+            <span className="section-label">What We Do</span>
             <h2 className="section-title" style={{ display: 'flex', gap: '0.3em', flexWrap: 'wrap' }}>
               <BlurText text="Our" delay={0.2} />
-              <em><BlurText text="Expertise" delay={0.4} /></em>
+              <em><BlurText text="Services" delay={0.4} /></em>
             </h2>
             <div className="gold-divider" style={{ justifyContent: 'flex-start' }}>
               <span className="line" /><span className="dot" /><span className="line" />
             </div>
-            <p className="section-desc" style={{ margin: 0, textAlign: 'left', maxWidth: '600px' }}>From concept to creation, we handle every detail to deliver a flawless experience tailored to your unique celebration.</p>
+            <p className="section-desc" style={{ margin: 0, textAlign: 'left', maxWidth: '600px' }}>From simple family functions to grand weddings, we take care of all decoration so you can relax and celebrate.</p>
           </motion.div>
         </div>
 

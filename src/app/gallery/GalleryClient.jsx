@@ -64,13 +64,13 @@ export default function GalleryClient() {
       <main className={styles.galleryPage}>
         <div className="container">
           <div className={styles.header}>
-            <span className="section-label">Our Portfolio</span>
-            <h1 className="section-title">Visual <em>Masterpieces</em></h1>
+            <span className="section-label">Real Photos</span>
+            <h1 className="section-title">Event Photo <em>Gallery</em></h1>
             <div className="gold-divider">
               <span className="line" /><span className="dot" /><span className="line" />
             </div>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              Browse through our extensive gallery of luxury weddings, corporate galas, and themed celebrations. Each event is a testament to our dedication to perfection.
+              Real photos of royal wedding stages, haldi &amp; mehndi setups, mandap designs, and celebrations we have decorated across Amritsar and Punjab.
             </p>
           </div>
 

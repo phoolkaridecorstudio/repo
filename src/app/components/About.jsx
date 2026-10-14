@@ -46,27 +46,22 @@ export default function About() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className={styles.sectionWatermark}>01</div>
-            <span className="section-label">Our Story</span>
+            <span className="section-label">About Us</span>
             <h2 className={`section-title ${styles.title}`}>
-              Crafting Unforgettable<br /><em>Experiences</em>
+              Making Every Celebration<br /><em>Unforgettable</em>
             </h2>
             <div className="gold-divider" style={{ justifyContent: 'flex-start' }}>
               <span className="line" /><span className="dot" /><span className="line" />
             </div>
 
             <p className={styles.text}>
-              As Amritsar&apos;s premier <strong>Event Planners and Decorators</strong>, we believe every celebration deserves to be extraordinary.
-              Rooted in the rich artistry of Punjabi Phoolkari tradition, we bring the same intricate craftsmanship
-              and attention to detail to every event we design.
+              We are Phoolkari Decor Studio, one of Amritsar&apos;s most trusted <strong>Wedding Decorators and Event Planners</strong>. Inspired by Punjab&apos;s rich Phulkari heritage, we bring warmth, vibrant colors, and fine craftsmanship to every family celebration.
             </p>
             <p className={styles.text}>
-              From grand wedding mandaps adorned with thousands of fresh flowers to intimate anniversary dinners
-              bathed in candlelight — we transform venues into breathtaking experiences that your guests will
-              remember for a lifetime.
+              From royal wedding mandaps decorated with fresh flowers to colorful Haldi &amp; Mehndi setups and intimate family dinners — we decorate your venue so beautifully that your guests will remember it for years.
             </p>
             <p className={styles.text}>
-              Working with Amritsar&apos;s finest hotels, resorts, and farmhouses, our team of expert designers
-              brings the latest global trends fused with timeless Indian elegance to create décor that is uniquely yours.
+              We regularly decorate Amritsar&apos;s top hotels, banquet halls, and farmhouses. Our dedicated team handles all setup work on time, so you and your family can relax and enjoy the celebrations without any stress.
             </p>
           </motion.div>
 

@@ -67,11 +67,11 @@ Looking forward to discussing this further!`;
         >
           <div className={styles.sectionWatermark}>05</div>
           <span className="section-label">Get in Touch</span>
-          <h2 className="section-title">Let&apos;s Create <em>Magic</em></h2>
+          <h2 className="section-title">Book Your <em>Event Decor</em></h2>
           <div className="gold-divider" style={{ justifyContent: 'flex-start' }}>
             <span className="line" /><span className="dot" /><span className="line" />
           </div>
-          <p className="section-desc" style={{ margin: 0, textAlign: 'left' }}>Tell us about your vision and we&apos;ll craft a quote tailored to your celebration</p>
+          <p className="section-desc" style={{ margin: 0, textAlign: 'left' }}>Share your event date and venue with us, and we&apos;ll send you decor ideas and a free quote on WhatsApp.</p>
         </motion.div>
 
         <div className={styles.grid}>
@@ -83,9 +83,9 @@ Looking forward to discussing this further!`;
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className={styles.infoTitle}>Reach Out to Us</h3>
+            <h3 className={styles.infoTitle}>Call or WhatsApp Us</h3>
             <p className={styles.infoText}>
-              Whether it&apos;s a grand wedding or an intimate celebration, we&apos;d love to hear about your vision. Get in touch and let&apos;s start planning.
+              Planning a wedding, birthday, or family celebration? Call or message us directly. We are always happy to help you with decor ideas and budget estimates.
             </p>
 
             <div className={styles.details}>
@@ -116,9 +116,9 @@ Looking forward to discussing this further!`;
                 </div>
                 <div>
                   <strong>Studio Location</strong>
-                  <span>Amritsar, Punjab, India</span>
+                  <span>Ashiana Estate, 1034, Fateh Garh Churian Rd, Murad Pura, Naushehra, Amritsar, Punjab 143008</span>
                   <a
-                    href="https://maps.google.com/?q=Amritsar+Punjab+Phoolkari+Decor+Studio"
+                    href="https://share.google/h12ps5eynG7lKzTKg"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.mapLink}
